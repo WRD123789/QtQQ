@@ -43,6 +43,11 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         emotionwindow.h emotionwindow.cpp
         emotionwindow.ui
         emotionlabelitem.h emotionlabelitem.cpp
+        talkwindowitem.h talkwindowitem.cpp
+        talkwindowitem.ui
+        talkwindow.h talkwindow.cpp
+        talkwindow.ui
+        windowmanager.h windowmanager.cpp
 
     )
 # Define target properties for Android with Qt 6 as:

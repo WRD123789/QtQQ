@@ -1129,6 +1129,13 @@ CMakeFiles/QtQQ.dir/ccmainwindow.cpp.o: \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qabstractanimation.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qeasingcurve.h \
   /Users/wangrundong/Documents/Projects/QtQQ/contactitem.h \
+  /Users/wangrundong/Documents/Projects/QtQQ/talkwindowshell.h \
+  /Users/wangrundong/Documents/Projects/QtQQ/emotionwindow.h \
+  /Users/wangrundong/Documents/Projects/QtQQ/talkwindowitem.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QListWidgetItem \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qlistwidget.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qlistview.h \
+  /Users/wangrundong/Documents/Projects/QtQQ/windowmanager.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QProxyStyle \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qproxystyle.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QCommonStyle \
@@ -1137,4 +1144,18 @@ CMakeFiles/QtQQ.dir/ccmainwindow.cpp.o: \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/qpainter.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QTimer \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qtimer.h \
-  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qbasictimer.h
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qbasictimer.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/QMouseEvent \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/qevent.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qpointer.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/qeventpoint.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/qvector2d.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/qvectornd.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/qpointingdevice.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/qinputdevice.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/qscreen.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QList \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QRect \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QSize \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QSizeF \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/QTransform

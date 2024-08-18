@@ -560,6 +560,54 @@ systray.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/systray.cpp.s
 .PHONY : systray.cpp.s
 
+talkwindow.o: talkwindow.cpp.o
+.PHONY : talkwindow.o
+
+# target to build an object file
+talkwindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/talkwindow.cpp.o
+.PHONY : talkwindow.cpp.o
+
+talkwindow.i: talkwindow.cpp.i
+.PHONY : talkwindow.i
+
+# target to preprocess a source file
+talkwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/talkwindow.cpp.i
+.PHONY : talkwindow.cpp.i
+
+talkwindow.s: talkwindow.cpp.s
+.PHONY : talkwindow.s
+
+# target to generate assembly for a file
+talkwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/talkwindow.cpp.s
+.PHONY : talkwindow.cpp.s
+
+talkwindowitem.o: talkwindowitem.cpp.o
+.PHONY : talkwindowitem.o
+
+# target to build an object file
+talkwindowitem.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/talkwindowitem.cpp.o
+.PHONY : talkwindowitem.cpp.o
+
+talkwindowitem.i: talkwindowitem.cpp.i
+.PHONY : talkwindowitem.i
+
+# target to preprocess a source file
+talkwindowitem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/talkwindowitem.cpp.i
+.PHONY : talkwindowitem.cpp.i
+
+talkwindowitem.s: talkwindowitem.cpp.s
+.PHONY : talkwindowitem.s
+
+# target to generate assembly for a file
+talkwindowitem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/talkwindowitem.cpp.s
+.PHONY : talkwindowitem.cpp.s
+
 talkwindowshell.o: talkwindowshell.cpp.o
 .PHONY : talkwindowshell.o
 
@@ -632,6 +680,30 @@ userlogin.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/userlogin.cpp.s
 .PHONY : userlogin.cpp.s
 
+windowmanager.o: windowmanager.cpp.o
+.PHONY : windowmanager.o
+
+# target to build an object file
+windowmanager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/windowmanager.cpp.o
+.PHONY : windowmanager.cpp.o
+
+windowmanager.i: windowmanager.cpp.i
+.PHONY : windowmanager.i
+
+# target to preprocess a source file
+windowmanager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/windowmanager.cpp.i
+.PHONY : windowmanager.cpp.i
+
+windowmanager.s: windowmanager.cpp.s
+.PHONY : windowmanager.s
+
+# target to generate assembly for a file
+windowmanager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/windowmanager.cpp.s
+.PHONY : windowmanager.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -692,6 +764,12 @@ help:
 	@echo "... systray.o"
 	@echo "... systray.i"
 	@echo "... systray.s"
+	@echo "... talkwindow.o"
+	@echo "... talkwindow.i"
+	@echo "... talkwindow.s"
+	@echo "... talkwindowitem.o"
+	@echo "... talkwindowitem.i"
+	@echo "... talkwindowitem.s"
 	@echo "... talkwindowshell.o"
 	@echo "... talkwindowshell.i"
 	@echo "... talkwindowshell.s"
@@ -701,6 +779,9 @@ help:
 	@echo "... userlogin.o"
 	@echo "... userlogin.i"
 	@echo "... userlogin.s"
+	@echo "... windowmanager.o"
+	@echo "... windowmanager.i"
+	@echo "... windowmanager.s"
 .PHONY : help
 
 

@@ -121,12 +121,18 @@ QtQQ_autogen/timestamp: \
 	/Users/wangrundong/Documents/Projects/QtQQ/skinwindow.h \
 	/Users/wangrundong/Documents/Projects/QtQQ/systray.cpp \
 	/Users/wangrundong/Documents/Projects/QtQQ/systray.h \
+	/Users/wangrundong/Documents/Projects/QtQQ/talkwindow.cpp \
+	/Users/wangrundong/Documents/Projects/QtQQ/talkwindow.h \
+	/Users/wangrundong/Documents/Projects/QtQQ/talkwindowitem.cpp \
+	/Users/wangrundong/Documents/Projects/QtQQ/talkwindowitem.h \
 	/Users/wangrundong/Documents/Projects/QtQQ/talkwindowshell.cpp \
 	/Users/wangrundong/Documents/Projects/QtQQ/talkwindowshell.h \
 	/Users/wangrundong/Documents/Projects/QtQQ/titlebar.cpp \
 	/Users/wangrundong/Documents/Projects/QtQQ/titlebar.h \
 	/Users/wangrundong/Documents/Projects/QtQQ/userlogin.cpp \
 	/Users/wangrundong/Documents/Projects/QtQQ/userlogin.h \
+	/Users/wangrundong/Documents/Projects/QtQQ/windowmanager.cpp \
+	/Users/wangrundong/Documents/Projects/QtQQ/windowmanager.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Versions/A/Headers/QMap \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Versions/A/Headers/QObject \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Versions/A/Headers/QPropertyAnimation \
@@ -287,6 +293,7 @@ QtQQ_autogen/timestamp: \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Versions/A/Headers/QPushButton \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Versions/A/Headers/QSystemTrayIcon \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Versions/A/Headers/QTreeWidget \
+	/Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Versions/A/Headers/QTreeWidgetItem \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Versions/A/Headers/QWidget \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractbutton.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractitemdelegate.h \
@@ -558,6 +565,8 @@ QtQQ_autogen/timestamp: \
 	/Users/wangrundong/Documents/Projects/QtQQ/contactitem.ui \
 	/Users/wangrundong/Documents/Projects/QtQQ/emotionwindow.ui \
 	/Users/wangrundong/Documents/Projects/QtQQ/skinwindow.ui \
+	/Users/wangrundong/Documents/Projects/QtQQ/talkwindow.ui \
+	/Users/wangrundong/Documents/Projects/QtQQ/talkwindowitem.ui \
 	/Users/wangrundong/Documents/Projects/QtQQ/talkwindowshell.ui \
 	/Users/wangrundong/Documents/Projects/QtQQ/userlogin.ui \
 	/opt/homebrew/Cellar/cmake/3.30.2/bin/cmake

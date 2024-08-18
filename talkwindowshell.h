@@ -3,6 +3,7 @@
 
 #include "basicwindow.h"
 #include "emotionwindow.h"
+#include "talkwindowitem.h"
 
 #include <QWidget>
 #include <QListWidgetItem>
@@ -22,7 +23,6 @@ enum GroupType {
 };
 
 class TalkWindow;
-class TalkWindowItem;
 
 // 对话窗口
 class TalkWindowShell : public BasicWindow {

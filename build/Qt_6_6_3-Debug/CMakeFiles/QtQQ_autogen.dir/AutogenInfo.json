@@ -415,6 +415,18 @@
 			null
 		],
 		[
+			"/Users/wangrundong/Documents/Projects/QtQQ/talkwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_talkwindow.cpp",
+			null
+		],
+		[
+			"/Users/wangrundong/Documents/Projects/QtQQ/talkwindowitem.h",
+			"MU",
+			"EWIEGA46WW/moc_talkwindowitem.cpp",
+			null
+		],
+		[
 			"/Users/wangrundong/Documents/Projects/QtQQ/talkwindowshell.h",
 			"MU",
 			"EWIEGA46WW/moc_talkwindowshell.cpp",
@@ -430,6 +442,12 @@
 			"/Users/wangrundong/Documents/Projects/QtQQ/userlogin.h",
 			"MU",
 			"EWIEGA46WW/moc_userlogin.cpp",
+			null
+		],
+		[
+			"/Users/wangrundong/Documents/Projects/QtQQ/windowmanager.h",
+			"MU",
+			"EWIEGA46WW/moc_windowmanager.cpp",
 			null
 		]
 	],
@@ -547,6 +565,16 @@
 		],
 		[ "/Users/wangrundong/Documents/Projects/QtQQ/systray.cpp", "MU", null ],
 		[
+			"/Users/wangrundong/Documents/Projects/QtQQ/talkwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/wangrundong/Documents/Projects/QtQQ/talkwindowitem.cpp",
+			"MU",
+			null
+		],
+		[
 			"/Users/wangrundong/Documents/Projects/QtQQ/talkwindowshell.cpp",
 			"MU",
 			null
@@ -554,6 +582,11 @@
 		[ "/Users/wangrundong/Documents/Projects/QtQQ/titlebar.cpp", "MU", null ],
 		[
 			"/Users/wangrundong/Documents/Projects/QtQQ/userlogin.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/wangrundong/Documents/Projects/QtQQ/windowmanager.cpp",
 			"MU",
 			null
 		]

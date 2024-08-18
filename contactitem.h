@@ -7,6 +7,7 @@ QT_BEGIN_NAMESPACE
 namespace Ui {
 class ContactItem;
 }
+QT_END_NAMESPACE
 
 // `QTreeWidget` 中每个子项的自定义组件
 class ContactItem : public QWidget {

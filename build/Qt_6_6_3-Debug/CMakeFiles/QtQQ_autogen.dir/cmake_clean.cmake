@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "QtQQ_autogen/include/ui_contactitem.h"
   "QtQQ_autogen/include/ui_emotionwindow.h"
   "QtQQ_autogen/include/ui_skinwindow.h"
+  "QtQQ_autogen/include/ui_talkwindow.h"
+  "QtQQ_autogen/include/ui_talkwindowitem.h"
   "QtQQ_autogen/include/ui_talkwindowshell.h"
   "QtQQ_autogen/include/ui_userlogin.h"
   "QtQQ_autogen/mocs_compilation.cpp"

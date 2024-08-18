@@ -93,6 +93,7 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/wait.h \
   /Users/wangrundong/Documents/Projects/QtQQ/basicwindow.h \
   /Users/wangrundong/Documents/Projects/QtQQ/emotionwindow.h \
+  /Users/wangrundong/Documents/Projects/QtQQ/talkwindowitem.h \
   /Users/wangrundong/Documents/Projects/QtQQ/titlebar.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Versions/A/Headers/q20memory.h \

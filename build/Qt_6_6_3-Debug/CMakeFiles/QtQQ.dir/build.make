@@ -669,10 +669,52 @@ CMakeFiles/QtQQ.dir/emotionlabelitem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/QtQQ.dir/emotionlabelitem.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/wangrundong/Documents/Projects/QtQQ/emotionlabelitem.cpp -o CMakeFiles/QtQQ.dir/emotionlabelitem.cpp.s
 
+CMakeFiles/QtQQ.dir/talkwindowitem.cpp.o: CMakeFiles/QtQQ.dir/flags.make
+CMakeFiles/QtQQ.dir/talkwindowitem.cpp.o: /Users/wangrundong/Documents/Projects/QtQQ/talkwindowitem.cpp
+CMakeFiles/QtQQ.dir/talkwindowitem.cpp.o: CMakeFiles/QtQQ.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/QtQQ.dir/talkwindowitem.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QtQQ.dir/talkwindowitem.cpp.o -MF CMakeFiles/QtQQ.dir/talkwindowitem.cpp.o.d -o CMakeFiles/QtQQ.dir/talkwindowitem.cpp.o -c /Users/wangrundong/Documents/Projects/QtQQ/talkwindowitem.cpp
+
+CMakeFiles/QtQQ.dir/talkwindowitem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/QtQQ.dir/talkwindowitem.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/wangrundong/Documents/Projects/QtQQ/talkwindowitem.cpp > CMakeFiles/QtQQ.dir/talkwindowitem.cpp.i
+
+CMakeFiles/QtQQ.dir/talkwindowitem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/QtQQ.dir/talkwindowitem.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/wangrundong/Documents/Projects/QtQQ/talkwindowitem.cpp -o CMakeFiles/QtQQ.dir/talkwindowitem.cpp.s
+
+CMakeFiles/QtQQ.dir/talkwindow.cpp.o: CMakeFiles/QtQQ.dir/flags.make
+CMakeFiles/QtQQ.dir/talkwindow.cpp.o: /Users/wangrundong/Documents/Projects/QtQQ/talkwindow.cpp
+CMakeFiles/QtQQ.dir/talkwindow.cpp.o: CMakeFiles/QtQQ.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/QtQQ.dir/talkwindow.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QtQQ.dir/talkwindow.cpp.o -MF CMakeFiles/QtQQ.dir/talkwindow.cpp.o.d -o CMakeFiles/QtQQ.dir/talkwindow.cpp.o -c /Users/wangrundong/Documents/Projects/QtQQ/talkwindow.cpp
+
+CMakeFiles/QtQQ.dir/talkwindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/QtQQ.dir/talkwindow.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/wangrundong/Documents/Projects/QtQQ/talkwindow.cpp > CMakeFiles/QtQQ.dir/talkwindow.cpp.i
+
+CMakeFiles/QtQQ.dir/talkwindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/QtQQ.dir/talkwindow.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/wangrundong/Documents/Projects/QtQQ/talkwindow.cpp -o CMakeFiles/QtQQ.dir/talkwindow.cpp.s
+
+CMakeFiles/QtQQ.dir/windowmanager.cpp.o: CMakeFiles/QtQQ.dir/flags.make
+CMakeFiles/QtQQ.dir/windowmanager.cpp.o: /Users/wangrundong/Documents/Projects/QtQQ/windowmanager.cpp
+CMakeFiles/QtQQ.dir/windowmanager.cpp.o: CMakeFiles/QtQQ.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/QtQQ.dir/windowmanager.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QtQQ.dir/windowmanager.cpp.o -MF CMakeFiles/QtQQ.dir/windowmanager.cpp.o.d -o CMakeFiles/QtQQ.dir/windowmanager.cpp.o -c /Users/wangrundong/Documents/Projects/QtQQ/windowmanager.cpp
+
+CMakeFiles/QtQQ.dir/windowmanager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/QtQQ.dir/windowmanager.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/wangrundong/Documents/Projects/QtQQ/windowmanager.cpp > CMakeFiles/QtQQ.dir/windowmanager.cpp.i
+
+CMakeFiles/QtQQ.dir/windowmanager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/QtQQ.dir/windowmanager.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/wangrundong/Documents/Projects/QtQQ/windowmanager.cpp -o CMakeFiles/QtQQ.dir/windowmanager.cpp.s
+
 CMakeFiles/QtQQ.dir/QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp.o: CMakeFiles/QtQQ.dir/flags.make
 CMakeFiles/QtQQ.dir/QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp.o: QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp
 CMakeFiles/QtQQ.dir/QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp.o: CMakeFiles/QtQQ.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/QtQQ.dir/QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/QtQQ.dir/QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QtQQ.dir/QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp.o -MF CMakeFiles/QtQQ.dir/QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp.o.d -o CMakeFiles/QtQQ.dir/QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp.o -c /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp
 
 CMakeFiles/QtQQ.dir/QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp.i: cmake_force
@@ -702,6 +744,9 @@ QtQQ_OBJECTS = \
 "CMakeFiles/QtQQ.dir/talkwindowshell.cpp.o" \
 "CMakeFiles/QtQQ.dir/emotionwindow.cpp.o" \
 "CMakeFiles/QtQQ.dir/emotionlabelitem.cpp.o" \
+"CMakeFiles/QtQQ.dir/talkwindowitem.cpp.o" \
+"CMakeFiles/QtQQ.dir/talkwindow.cpp.o" \
+"CMakeFiles/QtQQ.dir/windowmanager.cpp.o" \
 "CMakeFiles/QtQQ.dir/QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp.o"
 
 # External object files for target QtQQ
@@ -724,13 +769,16 @@ QtQQ.app/Contents/MacOS/QtQQ: CMakeFiles/QtQQ.dir/contactitem.cpp.o
 QtQQ.app/Contents/MacOS/QtQQ: CMakeFiles/QtQQ.dir/talkwindowshell.cpp.o
 QtQQ.app/Contents/MacOS/QtQQ: CMakeFiles/QtQQ.dir/emotionwindow.cpp.o
 QtQQ.app/Contents/MacOS/QtQQ: CMakeFiles/QtQQ.dir/emotionlabelitem.cpp.o
+QtQQ.app/Contents/MacOS/QtQQ: CMakeFiles/QtQQ.dir/talkwindowitem.cpp.o
+QtQQ.app/Contents/MacOS/QtQQ: CMakeFiles/QtQQ.dir/talkwindow.cpp.o
+QtQQ.app/Contents/MacOS/QtQQ: CMakeFiles/QtQQ.dir/windowmanager.cpp.o
 QtQQ.app/Contents/MacOS/QtQQ: CMakeFiles/QtQQ.dir/QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp.o
 QtQQ.app/Contents/MacOS/QtQQ: CMakeFiles/QtQQ.dir/build.make
 QtQQ.app/Contents/MacOS/QtQQ: /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Versions/A/QtWidgets
 QtQQ.app/Contents/MacOS/QtQQ: /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Versions/A/QtGui
 QtQQ.app/Contents/MacOS/QtQQ: /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Versions/A/QtCore
 QtQQ.app/Contents/MacOS/QtQQ: CMakeFiles/QtQQ.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable QtQQ.app/Contents/MacOS/QtQQ"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX executable QtQQ.app/Contents/MacOS/QtQQ"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/QtQQ.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

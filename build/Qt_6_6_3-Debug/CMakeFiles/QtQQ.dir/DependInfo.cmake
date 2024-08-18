@@ -24,9 +24,12 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/wangrundong/Documents/Projects/QtQQ/rootcontactitem.cpp" "CMakeFiles/QtQQ.dir/rootcontactitem.cpp.o" "gcc" "CMakeFiles/QtQQ.dir/rootcontactitem.cpp.o.d"
   "/Users/wangrundong/Documents/Projects/QtQQ/skinwindow.cpp" "CMakeFiles/QtQQ.dir/skinwindow.cpp.o" "gcc" "CMakeFiles/QtQQ.dir/skinwindow.cpp.o.d"
   "/Users/wangrundong/Documents/Projects/QtQQ/systray.cpp" "CMakeFiles/QtQQ.dir/systray.cpp.o" "gcc" "CMakeFiles/QtQQ.dir/systray.cpp.o.d"
+  "/Users/wangrundong/Documents/Projects/QtQQ/talkwindow.cpp" "CMakeFiles/QtQQ.dir/talkwindow.cpp.o" "gcc" "CMakeFiles/QtQQ.dir/talkwindow.cpp.o.d"
+  "/Users/wangrundong/Documents/Projects/QtQQ/talkwindowitem.cpp" "CMakeFiles/QtQQ.dir/talkwindowitem.cpp.o" "gcc" "CMakeFiles/QtQQ.dir/talkwindowitem.cpp.o.d"
   "/Users/wangrundong/Documents/Projects/QtQQ/talkwindowshell.cpp" "CMakeFiles/QtQQ.dir/talkwindowshell.cpp.o" "gcc" "CMakeFiles/QtQQ.dir/talkwindowshell.cpp.o.d"
   "/Users/wangrundong/Documents/Projects/QtQQ/titlebar.cpp" "CMakeFiles/QtQQ.dir/titlebar.cpp.o" "gcc" "CMakeFiles/QtQQ.dir/titlebar.cpp.o.d"
   "/Users/wangrundong/Documents/Projects/QtQQ/userlogin.cpp" "CMakeFiles/QtQQ.dir/userlogin.cpp.o" "gcc" "CMakeFiles/QtQQ.dir/userlogin.cpp.o.d"
+  "/Users/wangrundong/Documents/Projects/QtQQ/windowmanager.cpp" "CMakeFiles/QtQQ.dir/windowmanager.cpp.o" "gcc" "CMakeFiles/QtQQ.dir/windowmanager.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

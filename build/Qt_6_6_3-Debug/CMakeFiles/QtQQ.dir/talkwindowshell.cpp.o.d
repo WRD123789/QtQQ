@@ -1068,6 +1068,7 @@ CMakeFiles/QtQQ.dir/talkwindowshell.cpp.o: \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QDialog \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qdialog.h \
   /Users/wangrundong/Documents/Projects/QtQQ/emotionwindow.h \
+  /Users/wangrundong/Documents/Projects/QtQQ/talkwindowitem.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QListWidgetItem \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qlistwidget.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qlistview.h \
@@ -1114,4 +1115,9 @@ CMakeFiles/QtQQ.dir/talkwindowshell.cpp.o: \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qproxystyle.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QCommonStyle \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qcommonstyle.h \
-  /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/QPixmap
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/QPixmap \
+  /Users/wangrundong/Documents/Projects/QtQQ/talkwindow.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QTreeWidgetItem \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qtreewidget.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qtreeview.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qtreewidgetitemiterator.h
