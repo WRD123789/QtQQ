@@ -3,6 +3,7 @@
 #include "rootcontactitem.h"
 #include "contactitem.h"
 #include "commonutils.h"
+#include "windowmanager.h"
 
 TalkWindow::TalkWindow(QWidget *parent, const QString &windowID, GroupType groupType)
     : QWidget{parent}
@@ -17,7 +18,9 @@ TalkWindow::TalkWindow(QWidget *parent, const QString &windowID, GroupType group
 }
 
 TalkWindow::~TalkWindow()
-{}
+{
+    WindowManager::getInstance()->deleteWindow(m_windowID);
+}
 
 void TalkWindow::addEmotionImage(int emotionNum)
 {
@@ -26,7 +29,7 @@ void TalkWindow::addEmotionImage(int emotionNum)
 
 void TalkWindow::setWindowName(const QString &name)
 {
-
+    ui->nameLabel->setText(name);
 }
 
 void TalkWindow::onSetEmotionBtnStatus()
@@ -36,6 +39,17 @@ void TalkWindow::onSetEmotionBtnStatus()
 
 void TalkWindow::onSendBtnClicked()
 {
+
+}
+
+void TalkWindow::onItemDoubleClicked(QTreeWidgetItem *item, int column)
+{
+    bool isChild = item->data(0, Qt::UserRole).toBool();
+    if (isChild) {
+        QString peopleName = m_groupPeopleMap.value(item);
+        QString peopleID = item->data(0, Qt::UserRole + 1).toString();
+        WindowManager::getInstance()->addNewTalkWindow(peopleID, PTOP, peopleName);
+    }
 
 }
 
@@ -57,8 +71,8 @@ void TalkWindow::initControl()
     connect(ui->faceBtn, SIGNAL(clicked(bool)), parent(), SLOT(onEmotionBtnClicked(bool)));
     connect(ui->sendBtn, SIGNAL(clicked(bool)), this, SLOT(onSendBtnClicked(bool)));
 
-    connect(ui->treeWidget, SIGNAL(itemDoubleClicked(QTreeWidgetItem*, int)),
-            this, SLOT(onItemDoubleClicked(QTreeWidgetItem*, int)));
+    connect(ui->treeWidget, SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)),
+            this, SLOT(onItemDoubleClicked(QTreeWidgetItem*,int)));
 
     switch (m_groupType) {
     case COMPANY:

@@ -1,4 +1,5 @@
 /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/CMakeFiles/QtQQ.dir
+/Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/CMakeFiles/QtQQ_qmlimportscan.dir
 /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/CMakeFiles/edit_cache.dir
 /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/CMakeFiles/rebuild_cache.dir
 /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/CMakeFiles/list_install_components.dir

@@ -7,6 +7,7 @@
 #include "EWIEGA46WW/moc_emotionwindow.cpp"
 #include "EWIEGA46WW/moc_notifymanager.cpp"
 #include "EWIEGA46WW/moc_qclicklabel.cpp"
+#include "EWIEGA46WW/moc_qmsgtextedit.cpp"
 #include "EWIEGA46WW/moc_rootcontactitem.cpp"
 #include "EWIEGA46WW/moc_skinwindow.cpp"
 #include "EWIEGA46WW/moc_systray.cpp"

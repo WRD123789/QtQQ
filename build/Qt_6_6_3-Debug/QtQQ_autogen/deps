@@ -115,6 +115,8 @@ QtQQ_autogen/timestamp: \
 	/Users/wangrundong/Documents/Projects/QtQQ/notifymanager.h \
 	/Users/wangrundong/Documents/Projects/QtQQ/qclicklabel.cpp \
 	/Users/wangrundong/Documents/Projects/QtQQ/qclicklabel.h \
+	/Users/wangrundong/Documents/Projects/QtQQ/qmsgtextedit.cpp \
+	/Users/wangrundong/Documents/Projects/QtQQ/qmsgtextedit.h \
 	/Users/wangrundong/Documents/Projects/QtQQ/rootcontactitem.cpp \
 	/Users/wangrundong/Documents/Projects/QtQQ/rootcontactitem.h \
 	/Users/wangrundong/Documents/Projects/QtQQ/skinwindow.cpp \
@@ -272,6 +274,7 @@ QtQQ_autogen/timestamp: \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Versions/A/Headers/qkeysequence.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Versions/A/Headers/qpaintdevice.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Versions/A/Headers/qpalette.h \
+	/Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Versions/A/Headers/qpen.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Versions/A/Headers/qpicture.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Versions/A/Headers/qpixelformat.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Versions/A/Headers/qpixmap.h \
@@ -279,7 +282,10 @@ QtQQ_autogen/timestamp: \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Versions/A/Headers/qregion.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Versions/A/Headers/qrgb.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Versions/A/Headers/qrgba64.h \
+	/Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Versions/A/Headers/qtextcursor.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Versions/A/Headers/qtextdocument.h \
+	/Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Versions/A/Headers/qtextformat.h \
+	/Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Versions/A/Headers/qtextoption.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Versions/A/Headers/qtgui-config.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Versions/A/Headers/qtguiexports.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Versions/A/Headers/qtguiglobal.h \
@@ -292,6 +298,7 @@ QtQQ_autogen/timestamp: \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Versions/A/Headers/QMenu \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Versions/A/Headers/QPushButton \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Versions/A/Headers/QSystemTrayIcon \
+	/Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Versions/A/Headers/QTextEdit \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Versions/A/Headers/QTreeWidget \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Versions/A/Headers/QTreeWidgetItem \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Versions/A/Headers/QWidget \
@@ -316,6 +323,7 @@ QtQQ_autogen/timestamp: \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Versions/A/Headers/qsystemtrayicon.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Versions/A/Headers/qtabbar.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Versions/A/Headers/qtabwidget.h \
+	/Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Versions/A/Headers/qtextedit.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Versions/A/Headers/qtreeview.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Versions/A/Headers/qtreewidget.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Versions/A/Headers/qtreewidgetitemiterator.h \

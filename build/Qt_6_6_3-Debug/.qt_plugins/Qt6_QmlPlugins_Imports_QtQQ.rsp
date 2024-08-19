@@ -1,0 +1,9 @@
+-rootPath
+/Users/wangrundong/Documents/Projects/QtQQ
+-cmake-output
+-output-file
+/Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/.qt_plugins/Qt6_QmlPlugins_Imports_QtQQ.cmake
+-importPath
+/Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug
+-importPath
+/Users/wangrundong/Qt/6.6.3/macos/./qml

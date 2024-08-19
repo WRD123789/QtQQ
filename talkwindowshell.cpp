@@ -2,6 +2,7 @@
 #include "./ui_talkwindowshell.h"
 #include "commonutils.h"
 #include "talkwindow.h"
+#include "talkwindowitem.h"
 
 TalkWindowShell::TalkWindowShell(QWidget *parent)
     : BasicWindow{parent}
@@ -31,11 +32,36 @@ void TalkWindowShell::addTalkWindow(TalkWindow *talkWindow, TalkWindowItem *talk
     m_talkWindowItemMap.insert(aItem, talkWindow);
 
     aItem->setSelected(true);
+
+    talkWindowItem->setHeadPixmap(":/Resources/MainWindow/head.jpg");
+    ui->listWidget->addItem(aItem);
+    ui->listWidget->setItemWidget(aItem, talkWindowItem);
+
+    onTalkWindowItemClicked(aItem);
+
+    connect(talkWindowItem, &TalkWindowItem::signalCloseClicked,
+            this, [talkWindowItem, talkWindow, aItem, this] {
+        m_talkWindowItemMap.remove(aItem);
+        ui->listWidget->takeItem(ui->listWidget->row(aItem));
+        delete talkWindowItem;
+
+        talkWindow->close();
+        ui->rightStackedWidget->removeWidget(talkWindow);
+
+        // 不存在聊天窗口时, 关闭 `TalkWindowShell`
+        if (ui->rightStackedWidget->count() < 1)
+            close();
+    });
 }
 
 void TalkWindowShell::setCurrentWidget(QWidget *widget)
 {
     ui->rightStackedWidget->setCurrentWidget(widget);
+}
+
+const QMap<QListWidgetItem *, QWidget *> &TalkWindowShell::getTalkWindowItemMap() const
+{
+    return m_talkWindowItemMap;
 }
 
 void TalkWindowShell::initControl()

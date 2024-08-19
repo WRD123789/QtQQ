@@ -175,6 +175,19 @@ QtQQ/fast:
 .PHONY : QtQQ/fast
 
 #=============================================================================
+# Target rules for targets named QtQQ_qmlimportscan
+
+# Build rule for target.
+QtQQ_qmlimportscan: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 QtQQ_qmlimportscan
+.PHONY : QtQQ_qmlimportscan
+
+# fast build rule for target.
+QtQQ_qmlimportscan/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ_qmlimportscan.dir/build.make CMakeFiles/QtQQ_qmlimportscan.dir/build
+.PHONY : QtQQ_qmlimportscan/fast
+
+#=============================================================================
 # Target rules for targets named QtQQ_autogen_timestamp_deps
 
 # Build rule for target.
@@ -440,6 +453,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+msgwebview.o: msgwebview.cpp.o
+.PHONY : msgwebview.o
+
+# target to build an object file
+msgwebview.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/msgwebview.cpp.o
+.PHONY : msgwebview.cpp.o
+
+msgwebview.i: msgwebview.cpp.i
+.PHONY : msgwebview.i
+
+# target to preprocess a source file
+msgwebview.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/msgwebview.cpp.i
+.PHONY : msgwebview.cpp.i
+
+msgwebview.s: msgwebview.cpp.s
+.PHONY : msgwebview.s
+
+# target to generate assembly for a file
+msgwebview.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/msgwebview.cpp.s
+.PHONY : msgwebview.cpp.s
+
 notifymanager.o: notifymanager.cpp.o
 .PHONY : notifymanager.o
 
@@ -487,6 +524,30 @@ qclicklabel.s: qclicklabel.cpp.s
 qclicklabel.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/qclicklabel.cpp.s
 .PHONY : qclicklabel.cpp.s
+
+qmsgtextedit.o: qmsgtextedit.cpp.o
+.PHONY : qmsgtextedit.o
+
+# target to build an object file
+qmsgtextedit.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/qmsgtextedit.cpp.o
+.PHONY : qmsgtextedit.cpp.o
+
+qmsgtextedit.i: qmsgtextedit.cpp.i
+.PHONY : qmsgtextedit.i
+
+# target to preprocess a source file
+qmsgtextedit.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/qmsgtextedit.cpp.i
+.PHONY : qmsgtextedit.cpp.i
+
+qmsgtextedit.s: qmsgtextedit.cpp.s
+.PHONY : qmsgtextedit.s
+
+# target to generate assembly for a file
+qmsgtextedit.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/qmsgtextedit.cpp.s
+.PHONY : qmsgtextedit.cpp.s
 
 rootcontactitem.o: rootcontactitem.cpp.o
 .PHONY : rootcontactitem.o
@@ -718,6 +779,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... QtQQ_autogen"
 	@echo "... QtQQ_autogen_timestamp_deps"
+	@echo "... QtQQ_qmlimportscan"
 	@echo "... QtQQ"
 	@echo "... QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.o"
 	@echo "... QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.i"
@@ -749,12 +811,18 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... msgwebview.o"
+	@echo "... msgwebview.i"
+	@echo "... msgwebview.s"
 	@echo "... notifymanager.o"
 	@echo "... notifymanager.i"
 	@echo "... notifymanager.s"
 	@echo "... qclicklabel.o"
 	@echo "... qclicklabel.i"
 	@echo "... qclicklabel.s"
+	@echo "... qmsgtextedit.o"
+	@echo "... qmsgtextedit.i"
+	@echo "... qmsgtextedit.s"
 	@echo "... rootcontactitem.o"
 	@echo "... rootcontactitem.i"
 	@echo "... rootcontactitem.s"

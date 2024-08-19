@@ -81,9 +81,9 @@ void RootContactItem::paintEvent(QPaintEvent *event)
 
         // 将图片绘制到组件上
         painter.drawPixmap(6, (height() - pix.height()) / 2, tmpPix);
-
-        painter.restore(); // 恢复
     }
+
+    painter.restore(); // 恢复
 
     QLabel::paintEvent(event);
 }

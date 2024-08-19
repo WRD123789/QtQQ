@@ -1118,16 +1118,17 @@ CMakeFiles/QtQQ.dir/talkwindow.cpp.o: \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QSpacerItem \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QSplitter \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qsplitter.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QToolButton \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qtoolbutton.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QTreeWidget \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QVBoxLayout \
+  /Users/wangrundong/Documents/Projects/QtQQ/qmsgtextedit.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QTextEdit \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qtextedit.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/qtextoption.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/qtextcursor.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/qtextformat.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/qpen.h \
-  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QToolButton \
-  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qtoolbutton.h \
-  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QTreeWidget \
-  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QVBoxLayout \
   /Users/wangrundong/Documents/Projects/QtQQ/rootcontactitem.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QPropertyAnimation \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qpropertyanimation.h \
@@ -1140,4 +1141,6 @@ CMakeFiles/QtQQ.dir/talkwindow.cpp.o: \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qproxystyle.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QCommonStyle \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qcommonstyle.h \
-  /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/QPixmap
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/QPixmap \
+  /Users/wangrundong/Documents/Projects/QtQQ/windowmanager.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QObject

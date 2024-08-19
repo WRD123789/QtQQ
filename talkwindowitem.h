@@ -16,7 +16,7 @@ public:
     ~TalkWindowItem();
 
 public:
-    void setHeadPixmap(const QPixmap &pix);
+    void setHeadPixmap(const QString &headPath);
     void setMsgLabelContent(const QString &msg);
     QString getMsgLabelText();
 

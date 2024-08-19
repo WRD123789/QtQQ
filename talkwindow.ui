@@ -661,7 +661,7 @@ QPushButton#fileOpenBtn:pressed {
          </widget>
         </item>
         <item>
-         <widget class="QTextEdit" name="textEdit">
+         <widget class="QMsgTextEdit" name="textEdit">
           <property name="contextMenuPolicy">
            <enum>Qt::NoContextMenu</enum>
           </property>
@@ -849,6 +849,13 @@ QPushButton#fileOpenBtn:pressed {
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QMsgTextEdit</class>
+   <extends>QTextEdit</extends>
+   <header location="global">qmsgtextedit.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

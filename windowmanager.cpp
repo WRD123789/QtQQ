@@ -28,7 +28,7 @@ void WindowManager::deleteWindow(const QString &windowID)
 
 void WindowManager::addWindow(const QString &windowID, QWidget *widget)
 {
-    if (m_windowMap.contains(windowID))
+    if (!m_windowMap.contains(windowID))
         m_windowMap.insert(windowID, widget);
 }
 
@@ -46,6 +46,8 @@ void WindowManager::addNewTalkWindow(const QString &windowID, GroupType groupTyp
     if (widget == nullptr) {
         TalkWindow *talkWindow = new TalkWindow(m_talkWindowShell, windowID, groupType);
         TalkWindowItem *talkWindowItem = new TalkWindowItem(talkWindow);
+
+        addWindow(windowID, talkWindow);
 
         switch (groupType) {
             case COMPANY:
@@ -65,8 +67,8 @@ void WindowManager::addNewTalkWindow(const QString &windowID, GroupType groupTyp
                 talkWindowItem->setMsgLabelContent(QStringLiteral("市场部"));
                 break;
             case PTOP:
-                talkWindow->setWindowName(QStringLiteral("市场群-测试"));
-                talkWindowItem->setMsgLabelContent(QStringLiteral("市场部"));
+                talkWindow->setWindowName(QStringLiteral(""));
+                talkWindowItem->setMsgLabelContent(strPeople);
                 break;
             default:
                 break;
@@ -74,6 +76,10 @@ void WindowManager::addNewTalkWindow(const QString &windowID, GroupType groupTyp
 
         m_talkWindowShell->addTalkWindow(talkWindow, talkWindowItem, groupType);
     } else {
+        // 将左侧聊天列表中对应的项设置为选中状态
+        QListWidgetItem *item = m_talkWindowShell->getTalkWindowItemMap().key(widget);
+        item->setSelected(true);
+
         m_talkWindowShell->setCurrentWidget(widget);
     }
 

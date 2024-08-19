@@ -19,11 +19,11 @@
 #include <QtWidgets/QScrollArea>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QSplitter>
-#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QToolButton>
 #include <QtWidgets/QTreeWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include </Users/wangrundong/Documents/Projects/QtQQ/qmsgtextedit.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -60,7 +60,7 @@ public:
     QPushButton *faceBtn;
     QPushButton *fileOpenBtn;
     QSpacerItem *horizontalSpacer_2;
-    QTextEdit *textEdit;
+    QMsgTextEdit *textEdit;
     QHBoxLayout *horizontalLayout_4;
     QSpacerItem *horizontalSpacer_3;
     QToolButton *closeBtn;
@@ -324,7 +324,7 @@ public:
 
         verticalLayout_2->addWidget(moduleWidget);
 
-        textEdit = new QTextEdit(bottomWidget);
+        textEdit = new QMsgTextEdit(bottomWidget);
         textEdit->setObjectName("textEdit");
         textEdit->setContextMenuPolicy(Qt::NoContextMenu);
         textEdit->setFrameShape(QFrame::NoFrame);

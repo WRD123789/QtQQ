@@ -19,7 +19,7 @@ public:
 public:
     void setUserName(const QString &userName);
     void setSignName(const QString &signName);
-    void setHeadPixmap(const QPixmap &pix);
+    void setHeadPixmap(const QPixmap &head);
 
     QString getUserName() const;
     QSize getHeadLabelSize() const;

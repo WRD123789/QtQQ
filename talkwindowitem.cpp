@@ -14,9 +14,10 @@ TalkWindowItem::TalkWindowItem(QWidget *parent)
 TalkWindowItem::~TalkWindowItem()
 {}
 
-void TalkWindowItem::setHeadPixmap(const QPixmap &pix)
+void TalkWindowItem::setHeadPixmap(const QString &headPath)
 {
     QPixmap mask(":/Resources/MainWindow/head_mask.png");
+    QPixmap pix(headPath);
     QPixmap headPix = CommonUtils::getRoundImage(pix, mask, ui->headLabel->size());
     ui->headLabel->setPixmap(headPix);
 }
