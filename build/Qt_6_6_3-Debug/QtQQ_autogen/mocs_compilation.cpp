@@ -5,6 +5,7 @@
 #include "EWIEGA46WW/moc_custommenu.cpp"
 #include "EWIEGA46WW/moc_emotionlabelitem.cpp"
 #include "EWIEGA46WW/moc_emotionwindow.cpp"
+#include "EWIEGA46WW/moc_msgwebview.cpp"
 #include "EWIEGA46WW/moc_notifymanager.cpp"
 #include "EWIEGA46WW/moc_qclicklabel.cpp"
 #include "EWIEGA46WW/moc_qmsgtextedit.cpp"

@@ -26,7 +26,7 @@ public slots:
     void onSetEmotionBtnStatus();
 
 private slots:
-    void onSendBtnClicked();
+    void onSendBtnClicked(bool);
     void onItemDoubleClicked(QTreeWidgetItem* item, int column);
 
 private:

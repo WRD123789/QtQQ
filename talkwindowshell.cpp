@@ -81,6 +81,9 @@ void TalkWindowShell::initControl()
 
     connect(ui->listWidget, &QListWidget::itemClicked,
             this, &TalkWindowShell::onTalkWindowItemClicked);
+    connect(m_emotionWindow, SIGNAL(signalEmotionItemClicked(int)),
+            this, SLOT(onEmotionItemClicked(int)));
+
 }
 
 void TalkWindowShell::onEmotionBtnClicked(bool)

@@ -21,8 +21,8 @@ void EmotionLabelItem::setEmotionMovie(int emotionNum)
 
     QString imagePath = QString(":/Resources/MainWindow/emotion/%1.png").arg(emotionNum);
     m_apngMovie = new QMovie(imagePath, "apng", this);
-    //m_apngMovie->start();
-    //m_apngMovie->stop();
+    m_apngMovie->start();
+    m_apngMovie->stop();
     setMovie(m_apngMovie);
 }
 

@@ -20,23 +20,24 @@ void QMsgTextEdit::onEmotionImageFrameChange(int frame)
     // `QTextLine` 负责显示 `QTextDocument` 中的内容
     // `QTextDocument` 中资源改变时, `QTextLine` 中显示内容随之改变
     document()->addResource(QTextDocument::ImageResource,
-                            QUrl(m_emotionMap.value(movie)), movie->currentImage());
+                            QUrl(m_emotionMap.value(movie)), movie->currentPixmap());
 
 }
 
 void QMsgTextEdit::addEmotionUrl(int emotionNum)
 {
-    const QString &imagePath = QString(":/Resources/MainWindow/emotion/%1.png")
+    const QString &imagePath = QString("qrc:/Resources/MainWindow/emotion/%1.png")
                                    .arg(emotionNum);
+    const QString &flagPath = QString("%1").arg(imagePath);
 
     // 插入 HTML 格式的文本
-    insertHtml(QString("<img src='%1' />").arg(imagePath));
+    insertHtml(QString("<img src='%1' />").arg(flagPath));
 
     if (!m_listEmotionUrl.contains(imagePath)) {
         m_listEmotionUrl.append(imagePath);
 
         QMovie *apngMovie = new QMovie(imagePath, "apng", this);
-        m_emotionMap.insert(apngMovie, imagePath);
+        m_emotionMap.insert(apngMovie, flagPath);
 
         // 数据帧改变时发射信号
         connect(apngMovie, &QMovie::frameChanged,
@@ -46,6 +47,7 @@ void QMsgTextEdit::addEmotionUrl(int emotionNum)
 
         updateGeometry();
     }
+
 }
 
 void QMsgTextEdit::deleteAllEmotionImage()

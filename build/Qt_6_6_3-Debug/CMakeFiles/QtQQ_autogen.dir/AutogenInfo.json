@@ -1299,6 +1299,7 @@
 	],
 	"MOC_INCLUDES" : 
 	[
+		"/Users/wangrundong/Documents/Projects/QtQQ",
 		"/Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers",
 		"/Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework",
 		"/Users/wangrundong/Qt/6.6.3/macos/mkspecs/macx-clang",

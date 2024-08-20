@@ -14,7 +14,7 @@ EmotionWindow::EmotionWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    setWindowFlags(Qt::FramelessWindowHint | Qt::SubWindow); // 无边框, 子窗口
+    setWindowFlags(Qt::FramelessWindowHint); // 无边框, 子窗口
     setAttribute(Qt::WA_TranslucentBackground);              // 透明背景
     setAttribute(Qt::WA_DeleteOnClose);                      // 窗口关闭时回收资源
 

@@ -2,7 +2,7 @@ CMakeFiles/QtQQ.dir/QtQQ_autogen/mocs_compilation.cpp.o: \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/mocs_compilation.cpp \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/moc_basicwindow.cpp \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/../../../../basicwindow.h \
-  /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/../../../../titlebar.h \
+  /Users/wangrundong/Documents/Projects/QtQQ/titlebar.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QWidget \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qwidget.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qtwidgetsglobal.h \
@@ -1074,7 +1074,8 @@ CMakeFiles/QtQQ.dir/QtQQ_autogen/mocs_compilation.cpp.o: \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qtmochelpers.h \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/moc_ccmainwindow.cpp \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/../../../../ccmainwindow.h \
-  /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/../../../../systray.h \
+  /Users/wangrundong/Documents/Projects/QtQQ/basicwindow.h \
+  /Users/wangrundong/Documents/Projects/QtQQ/systray.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QSystemTrayIcon \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qsystemtrayicon.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QTreeWidget \
@@ -1106,13 +1107,43 @@ CMakeFiles/QtQQ.dir/QtQQ_autogen/mocs_compilation.cpp.o: \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QMap \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/moc_emotionlabelitem.cpp \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/../../../../emotionlabelitem.h \
-  /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/../../../../qclicklabel.h \
+  /Users/wangrundong/Documents/Projects/QtQQ/qclicklabel.h \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/moc_emotionwindow.cpp \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/../../../../emotionwindow.h \
+  /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/moc_msgwebview.cpp \
+  /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/../../../../msgwebview.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWebEngineWidgets.framework/Headers/QWebEngineView \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWebEngineWidgets.framework/Headers/qwebengineview.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/QPageLayout \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/qpagelayout.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/qpagesize.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/qpageranges.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWebEngineWidgets.framework/Headers/qtwebenginewidgetsglobal.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWebEngineCore.framework/Headers/qwebenginepage.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWebEngineCore.framework/Headers/qtwebenginecoreglobal.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWebEngineCore.framework/Headers/qtwebenginecore-config.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWebEngineCore.framework/Headers/qwebengineclientcertificateselection.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qtnetwork-config.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qsslcertificate.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qtnetworkexports.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qcryptographichash.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qdatetime.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qcalendar.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qssl.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QFlags \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWebEngineCore.framework/Headers/qwebenginedownloadrequest.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWebEngineCore.framework/Headers/qwebenginequotarequest.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtXml.framework/Headers/QDomNode \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtXml.framework/Headers/qdom.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtXml.framework/Headers/qtxmlglobal.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtXml.framework/Headers/qtxml-config.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtXml.framework/Headers/qtxmlexports.h \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/moc_notifymanager.cpp \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/../../../../notifymanager.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QObject \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/moc_qclicklabel.cpp \
+  /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/../../../../qclicklabel.h \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/moc_qmsgtextedit.cpp \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/../../../../qmsgtextedit.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QTextEdit \
@@ -1127,17 +1158,22 @@ CMakeFiles/QtQQ.dir/QtQQ_autogen/mocs_compilation.cpp.o: \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/moc_skinwindow.cpp \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/../../../../skinwindow.h \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/moc_systray.cpp \
+  /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/../../../../systray.h \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/moc_talkwindow.cpp \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/../../../../talkwindow.h \
-  /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/../../../../talkwindowshell.h \
-  /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/../../../../talkwindowitem.h \
+  /Users/wangrundong/Documents/Projects/QtQQ/talkwindowshell.h \
+  /Users/wangrundong/Documents/Projects/QtQQ/emotionwindow.h \
+  /Users/wangrundong/Documents/Projects/QtQQ/talkwindowitem.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QListWidgetItem \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qlistwidget.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qlistview.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QTreeWidgetItem \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/moc_talkwindowitem.cpp \
+  /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/../../../../talkwindowitem.h \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/moc_talkwindowshell.cpp \
+  /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/../../../../talkwindowshell.h \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/moc_titlebar.cpp \
+  /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/../../../../titlebar.h \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/moc_userlogin.cpp \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/../../../../userlogin.h \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/moc_windowmanager.cpp \

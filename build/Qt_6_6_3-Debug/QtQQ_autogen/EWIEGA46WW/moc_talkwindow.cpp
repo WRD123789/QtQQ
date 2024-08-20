@@ -101,12 +101,12 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSTalkWindowENDCLASS[] = {
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
        1,    0,   32,    2, 0x0a,    1 /* Public */,
-       3,    0,   33,    2, 0x08,    2 /* Private */,
-       4,    2,   34,    2, 0x08,    3 /* Private */,
+       3,    1,   33,    2, 0x08,    2 /* Private */,
+       4,    2,   36,    2, 0x08,    4 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::Bool,    2,
     QMetaType::Void, 0x80000000 | 5, QMetaType::Int,    6,    7,
 
        0        // eod
@@ -125,6 +125,7 @@ Q_CONSTINIT const QMetaObject TalkWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'onSendBtnClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<bool, std::false_type>,
         // method 'onItemDoubleClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QTreeWidgetItem *, std::false_type>,
@@ -140,7 +141,7 @@ void TalkWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         (void)_t;
         switch (_id) {
         case 0: _t->onSetEmotionBtnStatus(); break;
-        case 1: _t->onSendBtnClicked(); break;
+        case 1: _t->onSendBtnClicked((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
         case 2: _t->onItemDoubleClicked((*reinterpret_cast< std::add_pointer_t<QTreeWidgetItem*>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
         default: ;
         }

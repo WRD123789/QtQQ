@@ -5,6 +5,10 @@
 #include "commonutils.h"
 #include "windowmanager.h"
 
+#include <QFile>
+#include <QMessageBox>
+#include <QToolTip>
+
 TalkWindow::TalkWindow(QWidget *parent, const QString &windowID, GroupType groupType)
     : QWidget{parent}
     , ui(new Ui::TalkWindow)
@@ -24,7 +28,8 @@ TalkWindow::~TalkWindow()
 
 void TalkWindow::addEmotionImage(int emotionNum)
 {
-
+    ui->textEdit->setFocus();
+    ui->textEdit->addEmotionUrl(emotionNum);
 }
 
 void TalkWindow::setWindowName(const QString &name)
@@ -37,9 +42,22 @@ void TalkWindow::onSetEmotionBtnStatus()
 
 }
 
-void TalkWindow::onSendBtnClicked()
+void TalkWindow::onSendBtnClicked(bool)
 {
+    if (ui->textEdit->toPlainText().isEmpty()) {
+        QToolTip::showText(this->mapToGlobal(QPoint(630, 666)), QString::fromLocal8Bit("发送的信息不能为空!"),
+                           this, QRect(0, 0, 120, 100), 2000);
 
+        return;
+    }
+
+    // 从 `QTextEdit` 的文档中获取整个文档的 HTML 表示形式
+    QString html = ui->textEdit->document()->toHtml();
+
+    ui->textEdit->clear();
+    ui->textEdit->deleteAllEmotionImage();
+
+    ui->msgWidget->appendMsg(html); // 在消息窗口中添加信息
 }
 
 void TalkWindow::onItemDoubleClicked(QTreeWidgetItem *item, int column)

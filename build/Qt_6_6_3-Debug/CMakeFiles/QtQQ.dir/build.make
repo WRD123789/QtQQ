@@ -395,6 +395,14 @@ QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp: /Users/wangrundong/Documents/Proje
 QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp: /Users/wangrundong/Documents/Projects/QtQQ/Resources/MainWindow/emotion/122.png
 QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp: /Users/wangrundong/Documents/Projects/QtQQ/Resources/MainWindow/emotion/21.png
 QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp: /Users/wangrundong/Documents/Projects/QtQQ/Resources/MainWindow/emotion/19.png
+QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp: /Users/wangrundong/Documents/Projects/QtQQ/Resources/MainWindow/MsgHtml/ui.css
+QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp: /Users/wangrundong/Documents/Projects/QtQQ/Resources/MainWindow/MsgHtml/msgleftTmpl.html
+QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp: /Users/wangrundong/Documents/Projects/QtQQ/Resources/MainWindow/MsgHtml/msgFont.txt
+QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp: /Users/wangrundong/Documents/Projects/QtQQ/Resources/MainWindow/MsgHtml/msgrightTmpl.html
+QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp: /Users/wangrundong/Documents/Projects/QtQQ/Resources/MainWindow/MsgHtml/msgtmpl.js
+QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp: /Users/wangrundong/Documents/Projects/QtQQ/Resources/MainWindow/MsgHtml/qwebchannel.js
+QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp: /Users/wangrundong/Documents/Projects/QtQQ/Resources/MainWindow/MsgHtml/jquery-3.3.1.min.js
+QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp: /Users/wangrundong/Documents/Projects/QtQQ/Resources/MainWindow/MsgHtml/msgTmpl.html
 QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp: /Users/wangrundong/Documents/Projects/QtQQ/Resources/MainWindow/tab/icon_contacts_selected.png
 QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp: /Users/wangrundong/Documents/Projects/QtQQ/Resources/MainWindow/tab/icon_group_normal.png
 QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp: /Users/wangrundong/Documents/Projects/QtQQ/Resources/MainWindow/tab/icon_contacts_normal.png
