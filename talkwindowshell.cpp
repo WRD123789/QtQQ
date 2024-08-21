@@ -4,6 +4,8 @@
 #include "talkwindow.h"
 #include "talkwindowitem.h"
 
+#include <QSqlQuery>
+
 TalkWindowShell::TalkWindowShell(QWidget *parent)
     : BasicWindow{parent}
     , ui(new Ui::TalkWindowClass)
@@ -20,7 +22,7 @@ TalkWindowShell::~TalkWindowShell()
     m_emotionWindow = nullptr;
 }
 
-void TalkWindowShell::addTalkWindow(TalkWindow *talkWindow, TalkWindowItem *talkWindowItem, GroupType groupType)
+void TalkWindowShell::addTalkWindow(TalkWindow *talkWindow, TalkWindowItem *talkWindowItem, const QString &windowID)
 {
     ui->rightStackedWidget->addWidget(talkWindow);
 
@@ -33,7 +35,23 @@ void TalkWindowShell::addTalkWindow(TalkWindow *talkWindow, TalkWindowItem *talk
 
     aItem->setSelected(true);
 
-    talkWindowItem->setHeadPixmap(":/Resources/MainWindow/head.jpg");
+    // 判断是群聊还是单聊
+    QSqlQuery query;
+    QString sqlStr = QString("SELECT picture "
+                             "FROM tab_department "
+                             "WHERE departmentID = %1").arg(windowID);
+    query.exec(sqlStr);
+    if (query.next()) {
+        talkWindowItem->setHeadPixmap(query.value(0).toString());
+    } else {
+        sqlStr = QString("SELECT picture "
+                         "FROM tab_employees "
+                         "WHERE employeeID = %1").arg(windowID);
+        query.exec(sqlStr);
+        query.next();
+        talkWindowItem->setHeadPixmap(query.value(0).toString());
+    }
+
     ui->listWidget->addItem(aItem);
     ui->listWidget->setItemWidget(aItem, talkWindowItem);
 

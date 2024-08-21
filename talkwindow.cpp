@@ -7,17 +7,18 @@
 
 #include <QFile>
 #include <QMessageBox>
+#include <QSqlQuery>
 #include <QToolTip>
 
-TalkWindow::TalkWindow(QWidget *parent, const QString &windowID, GroupType groupType)
+TalkWindow::TalkWindow(QWidget *parent, const QString &windowID)
     : QWidget{parent}
     , ui(new Ui::TalkWindow)
     , m_windowID(windowID)
-    , m_groupType(groupType)
 {
     ui->setupUi(this);
 
     setAttribute(Qt::WA_DeleteOnClose);
+    initGroupTalkStatus();
     initControl();
 }
 
@@ -64,9 +65,8 @@ void TalkWindow::onItemDoubleClicked(QTreeWidgetItem *item, int column)
 {
     bool isChild = item->data(0, Qt::UserRole).toBool();
     if (isChild) {
-        QString peopleName = m_groupPeopleMap.value(item);
         QString peopleID = item->data(0, Qt::UserRole + 1).toString();
-        WindowManager::getInstance()->addNewTalkWindow(peopleID, PTOP, peopleName);
+        WindowManager::getInstance()->addNewTalkWindow(peopleID);
     }
 
 }
@@ -92,129 +92,26 @@ void TalkWindow::initControl()
     connect(ui->treeWidget, SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)),
             this, SLOT(onItemDoubleClicked(QTreeWidgetItem*,int)));
 
-    switch (m_groupType) {
-    case COMPANY:
-        initCompanyTalk();
-        break;
-    case PERSONELGROUP:
-        initPersonelTalk();
-        break;
-    case DEVELOPMENTGROUP:
-        initDevelopmentTalk();
-        break;
-    case MARKETGROUP:
-        initMarketTalk();
-        break;
-    case PTOP:
+    if (m_isGroupTalk)
+        initTalkWindow();
+    else
         initPToPTalk();
-        break;
-    default:
-        break;
-    }
+
 }
 
-void TalkWindow::initCompanyTalk()
+void TalkWindow::initGroupTalkStatus()
 {
-    QTreeWidgetItem *pRootItem = new QTreeWidgetItem;
-    pRootItem->setChildIndicatorPolicy(QTreeWidgetItem::ShowIndicator);
+    QSqlQuery query;
+    QString sqlStr = QString("SELECT * "
+                             "FROM tab_department "
+                             "WHERE departmentID = %1").arg(m_windowID);
+    query.exec(sqlStr);
 
-    pRootItem->setData(0, Qt::UserRole, 0);
-    RootContactItem *item = new RootContactItem(false, ui->treeWidget);
-
-    ui->treeWidget->setFixedHeight(646); // `TalkWindowShell` 高度 - `TalkWindow` 标题栏的高度
-
-    // 临时静态数据
-    int nEmployeeNum = 50;
-    QString qsGroupName = QString::fromLocal8Bit("公司群 %1/%2").arg(0).arg(50);
-    item->setText(qsGroupName);
-
-    // 插入分组节点
-    ui->treeWidget->addTopLevelItem(pRootItem);
-    ui->treeWidget->setItemWidget(pRootItem, 0, item);
-
-    // 设置展开
-    pRootItem->setExpanded(true);
-
-    for (int i = 0; i < nEmployeeNum; i += 1)
-        addPeopleInfo(pRootItem);
 }
 
-void TalkWindow::initPersonelTalk()
+void TalkWindow::initTalkWindow()
 {
-    QTreeWidgetItem *pRootItem = new QTreeWidgetItem;
-    pRootItem->setChildIndicatorPolicy(QTreeWidgetItem::ShowIndicator);
 
-    pRootItem->setData(0, Qt::UserRole, 0);
-    RootContactItem *item = new RootContactItem(false, ui->treeWidget);
-
-    ui->treeWidget->setFixedHeight(646); // `TalkWindowShell` 高度 - `TalkWindow` 标题栏的高度
-
-    // 临时静态数据
-    int nEmployeeNum = 30;
-    QString qsGroupName = QString::fromLocal8Bit("人事部 %1/%2").arg(2).arg(28);
-    item->setText(qsGroupName);
-
-    // 插入分组节点
-    ui->treeWidget->addTopLevelItem(pRootItem);
-    ui->treeWidget->setItemWidget(pRootItem, 0, item);
-
-    // 设置展开
-    pRootItem->setExpanded(true);
-
-    for (int i = 0; i < nEmployeeNum; i += 1)
-        addPeopleInfo(pRootItem);
-}
-
-void TalkWindow::initDevelopmentTalk()
-{
-    QTreeWidgetItem *pRootItem = new QTreeWidgetItem;
-    pRootItem->setChildIndicatorPolicy(QTreeWidgetItem::ShowIndicator);
-
-    pRootItem->setData(0, Qt::UserRole, 0);
-    RootContactItem *item = new RootContactItem(false, ui->treeWidget);
-
-    ui->treeWidget->setFixedHeight(646); // `TalkWindowShell` 高度 - `TalkWindow` 标题栏的高度
-
-    // 临时静态数据
-    int nEmployeeNum = 77;
-    QString qsGroupName = QString::fromLocal8Bit("研发部 %1/%2").arg(0).arg(77);
-    item->setText(qsGroupName);
-
-    // 插入分组节点
-    ui->treeWidget->addTopLevelItem(pRootItem);
-    ui->treeWidget->setItemWidget(pRootItem, 0, item);
-
-    // 设置展开
-    pRootItem->setExpanded(true);
-
-    for (int i = 0; i < nEmployeeNum; i += 1)
-        addPeopleInfo(pRootItem);
-}
-
-void TalkWindow::initMarketTalk()
-{
-    QTreeWidgetItem *pRootItem = new QTreeWidgetItem;
-    pRootItem->setChildIndicatorPolicy(QTreeWidgetItem::ShowIndicator);
-
-    pRootItem->setData(0, Qt::UserRole, 0);
-    RootContactItem *item = new RootContactItem(false, ui->treeWidget);
-
-    ui->treeWidget->setFixedHeight(646); // `TalkWindowShell` 高度 - `TalkWindow` 标题栏的高度
-
-    // 临时静态数据
-    int nEmployeeNum = 20;
-    QString qsGroupName = QString::fromLocal8Bit("市场部 %1/%2").arg(9).arg(11);
-    item->setText(qsGroupName);
-
-    // 插入分组节点
-    ui->treeWidget->addTopLevelItem(pRootItem);
-    ui->treeWidget->setItemWidget(pRootItem, 0, item);
-
-    // 设置展开
-    pRootItem->setExpanded(true);
-
-    for (int i = 0; i < nEmployeeNum; i += 1)
-        addPeopleInfo(pRootItem);
 }
 
 void TalkWindow::initPToPTalk()

@@ -33,7 +33,7 @@ private:
     void updateSearchStyle(); // 更新搜索样式
     void initTimer();         // 初始化计时器
     void initControl();       // 初始化控件
-    void addCompanyDeps(QTreeWidgetItem* pRootGroupItem, const QString &depName); // 添加群聊
+    void addCompanyDeps(QTreeWidgetItem* pRootGroupItem, int depID); // 添加部门群聊
 
 private:
     void resizeEvent(QResizeEvent *event);
@@ -51,6 +51,5 @@ private slots:
 private:
     Ui::CCMainWindow *ui;
     SysTray *tray;                              // 系统托盘
-    QMap<QTreeWidgetItem*, QString> m_groupMap; // 所有分组
 };
 #endif // CCMAINWINDOW_H

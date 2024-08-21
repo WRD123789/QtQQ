@@ -2,6 +2,8 @@
 #include "talkwindowitem.h"
 #include "talkwindow.h"
 
+#include <QSqlQuery>
+
 // 创建全局静态对象
 Q_GLOBAL_STATIC(WindowManager, theInstance)
 
@@ -32,7 +34,7 @@ void WindowManager::addWindow(const QString &windowID, QWidget *widget)
         m_windowMap.insert(windowID, widget);
 }
 
-void WindowManager::addNewTalkWindow(const QString &windowID, GroupType groupType, const QString &strPeople)
+void WindowManager::addNewTalkWindow(const QString &windowID)
 {
     if (m_talkWindowShell == nullptr) {
         m_talkWindowShell = new TalkWindowShell;
@@ -44,37 +46,29 @@ void WindowManager::addNewTalkWindow(const QString &windowID, GroupType groupTyp
 
     QWidget *widget = findWindow(windowID);
     if (widget == nullptr) {
-        TalkWindow *talkWindow = new TalkWindow(m_talkWindowShell, windowID, groupType);
+        TalkWindow *talkWindow = new TalkWindow(m_talkWindowShell, windowID);
         TalkWindowItem *talkWindowItem = new TalkWindowItem(talkWindow);
 
-        addWindow(windowID, talkWindow);
-
-        switch (groupType) {
-            case COMPANY:
-                talkWindow->setWindowName(QStringLiteral("公司群-测试"));
-                talkWindowItem->setMsgLabelContent(QStringLiteral("公司群"));
-                break;
-            case PERSONELGROUP:
-                talkWindow->setWindowName(QStringLiteral("人事部-测试"));
-                talkWindowItem->setMsgLabelContent(QStringLiteral("人事部"));
-                break;
-            case DEVELOPMENTGROUP:
-                talkWindow->setWindowName(QStringLiteral("研发部-测试"));
-                talkWindowItem->setMsgLabelContent(QStringLiteral("研发部"));
-                break;
-            case MARKETGROUP:
-                talkWindow->setWindowName(QStringLiteral("市场群-测试"));
-                talkWindowItem->setMsgLabelContent(QStringLiteral("市场部"));
-                break;
-            case PTOP:
-                talkWindow->setWindowName(QStringLiteral(""));
-                talkWindowItem->setMsgLabelContent(strPeople);
-                break;
-            default:
-                break;
+        QSqlQuery query;
+        QString sqlStr = QString("SELECT department_name, sign "
+                                 "FROM tab_department "
+                                 "WHERE departmentID = %1").arg(windowID);
+        query.exec(sqlStr);
+        // 判断是单聊还是群聊
+        if (query.next()) {
+            talkWindow->setWindowName(query.value(0).toString());
+            talkWindowItem->setMsgLabelContent(query.value(1).toString());
+        } else {
+            sqlStr = QString("SELECT employee_name, employee_sign "
+                             "FROM tab_employees "
+                             "WHERE employeeID = %1").arg(windowID);
+            query.exec(sqlStr);
+            query.next();
+            talkWindow->setWindowName(query.value(0).toString());
+            talkWindowItem->setMsgLabelContent(query.value(1).toString());
         }
 
-        m_talkWindowShell->addTalkWindow(talkWindow, talkWindowItem, groupType);
+        m_talkWindowShell->addTalkWindow(talkWindow, talkWindowItem, windowID);
     } else {
         // 将左侧聊天列表中对应的项设置为选中状态
         QListWidgetItem *item = m_talkWindowShell->getTalkWindowItemMap().key(widget);

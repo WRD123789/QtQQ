@@ -17,8 +17,7 @@ public:
     QWidget* findWindow(const QString &windowID);             // 在管理器中查找窗口
     void deleteWindow(const QString &windowID);               // 将指定窗口移出管理器
     void addWindow(const QString &windowID, QWidget *widget); // 将指定窗口加入管理器
-    void addNewTalkWindow(const QString &windowID, GroupType groupType = COMPANY,
-                          const QString &strPeople = "");     // 添加新的对话窗口
+    void addNewTalkWindow(const QString &windowID);           // 添加新的对话窗口
 
     static WindowManager* getInstance();
 

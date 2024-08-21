@@ -1145,6 +1145,12 @@ CMakeFiles/QtQQ.dir/ccmainwindow.cpp.o: \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QTimer \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qtimer.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qbasictimer.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/QSqlQuery \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qsqlquery.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qtsqlglobal.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qtsql-config.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qtsqlexports.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/QMouseEvent \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/qevent.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qpointer.h \

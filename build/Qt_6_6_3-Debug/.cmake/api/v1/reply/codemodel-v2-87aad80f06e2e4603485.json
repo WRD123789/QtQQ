@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-13aed63effb7c7b3434d.json",
+					"jsonFile" : "directory-.-Debug-eff8a0cca27d41517dae.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -46,7 +46,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "QtQQ::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-QtQQ-Debug-a6d30521c440f3247b36.json",
+					"jsonFile" : "target-QtQQ-Debug-56cf2369478d5a570fd2.json",
 					"name" : "QtQQ",
 					"projectIndex" : 0
 				},
@@ -67,7 +67,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "QtQQ_qmlimportscan::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-QtQQ_qmlimportscan-Debug-0d3f1ea57cddc143a4f5.json",
+					"jsonFile" : "target-QtQQ_qmlimportscan-Debug-abca0690b2fad6be6304.json",
 					"name" : "QtQQ_qmlimportscan",
 					"projectIndex" : 0
 				}

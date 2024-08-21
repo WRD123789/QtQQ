@@ -4742,6 +4742,152 @@
 			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Xml/Qt6XmlVersionlessTargets.cmake"
 		},
 		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6SqlConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6SqlConfigVersionImpl.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6SqlConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.30.2/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6SqlDependencies.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6SqlTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6SqlTargets-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6SqlAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6SqlVersionlessTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6SqlPlugins.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6QMYSQLDriverPluginConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.30.2/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6QMYSQLDriverPluginTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6QMYSQLDriverPluginTargets-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6QMYSQLDriverPluginAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.30.2/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginTargets-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6QMimerSQLDriverPluginAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.30.2/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginTargets-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6QODBCDriverPluginAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.30.2/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginTargets-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6QPSQLDriverPluginAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.30.2/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginTargets-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/cmake/Qt6Sql/Qt6QSQLiteDriverPluginAdditionalTargetInfo.cmake"
+		},
+		{
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "/opt/homebrew/Cellar/cmake/3.30.2/share/cmake/Modules/GNUInstallDirs.cmake"

@@ -79,7 +79,7 @@
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 23,
+				"line" : 25,
 				"parent" : 0
 			},
 			{
@@ -103,13 +103,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 92,
+				"line" : 96,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 73,
+				"line" : 75,
 				"parent" : 0
 			},
 			{
@@ -627,7 +627,7 @@
 			{
 				"command" : 18,
 				"file" : 1,
-				"line" : 99,
+				"line" : 103,
 				"parent" : 0
 			},
 			{
@@ -669,7 +669,7 @@
 			{
 				"command" : 19,
 				"file" : 1,
-				"line" : 75,
+				"line" : 15,
 				"parent" : 0
 			}
 		]
@@ -724,6 +724,10 @@
 				{
 					"backtrace" : 6,
 					"define" : "QT_QUICK_LIB"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "QT_SQL_LIB"
 				},
 				{
 					"backtrace" : 6,
@@ -817,6 +821,11 @@
 					"backtrace" : 6,
 					"isSystem" : true,
 					"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/QtXml.framework"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework"
 				}
 			],
 			"includes" : 
@@ -828,6 +837,10 @@
 				{
 					"backtrace" : 110,
 					"path" : "/Users/wangrundong/Documents/Projects/QtQQ"
+				},
+				{
+					"backtrace" : 110,
+					"path" : "/opt/homebrew/opt/mysql/include/mysql"
 				},
 				{
 					"backtrace" : 96,
@@ -913,6 +926,11 @@
 					"backtrace" : 6,
 					"isSystem" : true,
 					"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/QtXml.framework/Headers"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers"
 				}
 			],
 			"language" : "CXX",
@@ -956,15 +974,15 @@
 	"dependencies" : 
 	[
 		{
+			"backtrace" : 109,
+			"id" : "QtQQ_qmlimportscan::@6890427a1f51a3e7e1df"
+		},
+		{
 			"id" : "QtQQ_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 0,
 			"id" : "QtQQ_autogen::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 109,
-			"id" : "QtQQ_qmlimportscan::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "QtQQ::@6890427a1f51a3e7e1df",
@@ -1010,6 +1028,11 @@
 			{
 				"backtrace" : 6,
 				"fragment" : "/Users/wangrundong/Qt/6.6.3/macos/lib/QtXml.framework/Versions/A/QtXml",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Versions/A/QtSql",
 				"role" : "libraries"
 			},
 			{

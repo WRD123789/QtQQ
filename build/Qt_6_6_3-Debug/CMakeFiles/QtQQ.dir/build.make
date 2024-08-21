@@ -816,6 +816,7 @@ QtQQ.app/Contents/MacOS/QtQQ: CMakeFiles/QtQQ.dir/QtQQ_autogen/EWIEGA46WW/qrc_cc
 QtQQ.app/Contents/MacOS/QtQQ: CMakeFiles/QtQQ.dir/build.make
 QtQQ.app/Contents/MacOS/QtQQ: /Users/wangrundong/Qt/6.6.3/macos/lib/QtWebEngineWidgets.framework/Versions/A/QtWebEngineWidgets
 QtQQ.app/Contents/MacOS/QtQQ: /Users/wangrundong/Qt/6.6.3/macos/lib/QtXml.framework/Versions/A/QtXml
+QtQQ.app/Contents/MacOS/QtQQ: /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Versions/A/QtSql
 QtQQ.app/Contents/MacOS/QtQQ: /Users/wangrundong/Qt/6.6.3/macos/lib/QtWebEngineCore.framework/Versions/A/QtWebEngineCore
 QtQQ.app/Contents/MacOS/QtQQ: /Users/wangrundong/Qt/6.6.3/macos/lib/QtQuick.framework/Versions/A/QtQuick
 QtQQ.app/Contents/MacOS/QtQQ: /Users/wangrundong/Qt/6.6.3/macos/lib/QtQmlModels.framework/Versions/A/QtQmlModels

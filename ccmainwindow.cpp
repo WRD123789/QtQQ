@@ -11,7 +11,10 @@
 #include <QPainter>
 #include <QTimer>
 #include <QApplication>
+#include <QSqlQuery>
 #include "QMouseEvent"
+
+extern QString gLoginEmployeeID;
 
 class CustomProxyStyle : public QProxyStyle {
 public:
@@ -106,24 +109,31 @@ void CCMainWindow::initControl()
     });
 }
 
-void CCMainWindow::addCompanyDeps(QTreeWidgetItem* pRootGroupItem, const QString &depName)
+void CCMainWindow::addCompanyDeps(QTreeWidgetItem* pRootGroupItem, int depID)
 {
     QTreeWidgetItem *pChild = new QTreeWidgetItem;
 
     pChild->setData(0, Qt::UserRole, 1);
     pChild->setData(0, Qt::UserRole + 1, QString::number(quintptr(pChild)));
 
+    // 根据部门号获取部门名和头像
+    QString sqlStr = QString("SELECT department_name, picture "
+                             "FROM tab_department "
+                             "WHERE departmentID = %1").arg(depID);
+    QSqlQuery query;
+    query.exec(sqlStr);
+    query.next();
+    QString depName = query.value(0).toString();
+    QPixmap depHead(query.value(1).toString());
+
     ContactItem *pContactItem = new ContactItem(ui->treeWidget);
     QPixmap head_mask(":/Resources/MainWindow/head_mask.png");
-    QPixmap head = getRoundImage(QPixmap(":/Resources/MainWindow/head.jpg"),
-                                  head_mask, pContactItem->getHeadLabelSize());
+    QPixmap head = getRoundImage(depHead, head_mask, pContactItem->getHeadLabelSize());
     pContactItem->setHeadPixmap(head);
     pContactItem->setUserName(depName);
 
     pRootGroupItem->addChild(pChild);
     ui->treeWidget->setItemWidget(pChild, 0, pContactItem);
-
-    m_groupMap.insert(pChild, depName);
 }
 
 void CCMainWindow::setUserName(const QString &name)
@@ -218,12 +228,10 @@ void CCMainWindow::initContactTree()
     pRootGroupItem->setChildIndicatorPolicy(QTreeWidgetItem::ShowIndicator);
     // 根项数据设置为 0, 子项数据设置为 1
     pRootGroupItem->setData(0, Qt::UserRole, 0);
-
-    // 项右边默认的箭头
+    // 取消项右边默认的箭头
     ui->treeWidget->setIndentation(0);
 
     RootContactItem *pItem = new RootContactItem(true, ui->treeWidget);
-
     QString strGroupName = QString::fromLocal8Bit("聊天分组");
     pItem->setText(strGroupName);
 
@@ -231,14 +239,25 @@ void CCMainWindow::initContactTree()
     ui->treeWidget->addTopLevelItem(pRootGroupItem);
     ui->treeWidget->setItemWidget(pRootGroupItem, 0, pItem);
 
-    QStringList tests;
-    tests << QString::fromLocal8Bit("公司群");
-    tests << QString::fromLocal8Bit("人事部");
-    tests << QString::fromLocal8Bit("研发部");
-    tests << QString::fromLocal8Bit("市场部");
+    QSqlQuery query;
+    // 获取公司 ID
+    QString sqlStr = QString("SELECT departmentID "
+                             "FROM tab_department "
+                             "WHERE department_name = '%1'").arg("公司群");
+    query.exec(sqlStr);
+    query.next();
+    int compID = query.value(0).toInt();
 
-    for (int nIndex = 0; nIndex < tests.length(); nIndex += 1)
-        addCompanyDeps(pRootGroupItem, tests.at(nIndex));
+    // 获取自己所在的部门 ID
+    sqlStr = QString("SELECT departmentID "
+                     "FROM tab_employees "
+                     "WHERE employeeID = %1").arg(gLoginEmployeeID);
+    query.exec(sqlStr);
+    query.next();
+    int depID = query.value(0).toInt();
+
+    addCompanyDeps(pRootGroupItem, compID);
+    addCompanyDeps(pRootGroupItem, depID);
 }
 
 void CCMainWindow::updateSearchStyle()

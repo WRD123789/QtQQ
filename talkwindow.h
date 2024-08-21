@@ -15,7 +15,7 @@ QT_END_NAMESPACE
 class TalkWindow : public QWidget {
     Q_OBJECT
 public:
-    TalkWindow(QWidget *parent, const QString &windowID, GroupType groupType);
+    TalkWindow(QWidget *parent, const QString &windowID);
     ~TalkWindow();
 
 public:
@@ -31,19 +31,17 @@ private slots:
 
 private:
     void initControl();
+    void initGroupTalkStatus();
 
-    void initCompanyTalk();     // 初始化公司群聊天
-    void initPersonelTalk();    // 初始化人事部聊天
-    void initDevelopmentTalk(); // 初始化研发部聊天
-    void initMarketTalk();      // 初始化市场部聊天
-    void initPToPTalk();        // 初始化单人聊天
+    void initTalkWindow(); // 初始化群聊
+    void initPToPTalk();   // 初始化单人聊天
 
     void addPeopleInfo(QTreeWidgetItem *pRootGroupItem);
 
 private:
     Ui::TalkWindow *ui;
     QString m_windowID;
-    GroupType m_groupType;
+    bool m_isGroupTalk; // 是否为群聊
     QMap<QTreeWidgetItem*, QString> m_groupPeopleMap; // 包含群组中所有人员的名字
 };
 

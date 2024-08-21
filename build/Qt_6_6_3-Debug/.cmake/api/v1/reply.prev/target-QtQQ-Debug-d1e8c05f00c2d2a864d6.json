@@ -727,6 +727,10 @@
 				},
 				{
 					"backtrace" : 6,
+					"define" : "QT_SQL_LIB"
+				},
+				{
+					"backtrace" : 6,
 					"define" : "QT_WEBCHANNEL_LIB"
 				},
 				{
@@ -817,6 +821,11 @@
 					"backtrace" : 6,
 					"isSystem" : true,
 					"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/QtXml.framework"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework"
 				}
 			],
 			"includes" : 
@@ -913,6 +922,11 @@
 					"backtrace" : 6,
 					"isSystem" : true,
 					"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/QtXml.framework/Headers"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "/Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers"
 				}
 			],
 			"language" : "CXX",
@@ -956,15 +970,15 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "QtQQ_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 109,
+			"id" : "QtQQ_qmlimportscan::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 0,
 			"id" : "QtQQ_autogen::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 109,
-			"id" : "QtQQ_qmlimportscan::@6890427a1f51a3e7e1df"
+			"id" : "QtQQ_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "QtQQ::@6890427a1f51a3e7e1df",
@@ -1010,6 +1024,11 @@
 			{
 				"backtrace" : 6,
 				"fragment" : "/Users/wangrundong/Qt/6.6.3/macos/lib/QtXml.framework/Versions/A/QtXml",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Versions/A/QtSql",
 				"role" : "libraries"
 			},
 			{
