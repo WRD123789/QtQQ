@@ -17,11 +17,11 @@ class CCMainWindow : public BasicWindow {
     Q_OBJECT
 
 public:
-    CCMainWindow(QWidget *parent = nullptr);
+    CCMainWindow(QString account, bool isAccountLogin, QWidget *parent = nullptr);
     ~CCMainWindow();
 
 public:
-    void setUserName(const QString &name);             // 设置用户名
+    void setUserName();             // 设置用户名
     void setLevelPixmap(int level);                    // 设置等级
     void setHeadPixmap(const QString &headPath);       // 设置头像
     void setStatusMenuIcon(const QString &statusPath); // 设置状态
@@ -34,6 +34,7 @@ private:
     void initTimer();         // 初始化计时器
     void initControl();       // 初始化控件
     void addCompanyDeps(QTreeWidgetItem* pRootGroupItem, int depID); // 添加部门群聊
+    QString getHeadPath();
 
 private:
     void resizeEvent(QResizeEvent *event);
@@ -50,6 +51,8 @@ private slots:
 
 private:
     Ui::CCMainWindow *ui;
-    SysTray *tray;                              // 系统托盘
+    SysTray *tray;         // 系统托盘
+    bool m_isAccountLogin; // 是否为账号登录
+    QString m_account;     // 登录的账号或员工号
 };
 #endif // CCMAINWINDOW_H

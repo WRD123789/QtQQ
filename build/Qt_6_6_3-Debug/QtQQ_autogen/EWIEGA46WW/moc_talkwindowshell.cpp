@@ -42,6 +42,12 @@ constexpr auto qt_meta_stringdata_CLASSTalkWindowShellENDCLASS = QtMocHelpers::s
     "TalkWindowShell",
     "onEmotionBtnClicked",
     "",
+    "updateSendMsg",
+    "QString&",
+    "msg",
+    "int&",
+    "msgType",
+    "file",
     "onTalkWindowItemClicked",
     "QListWidgetItem*",
     "item",
@@ -50,15 +56,21 @@ constexpr auto qt_meta_stringdata_CLASSTalkWindowShellENDCLASS = QtMocHelpers::s
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSTalkWindowShellENDCLASS_t {
-    uint offsetsAndSizes[16];
+    uint offsetsAndSizes[28];
     char stringdata0[16];
     char stringdata1[20];
     char stringdata2[1];
-    char stringdata3[24];
-    char stringdata4[17];
-    char stringdata5[5];
-    char stringdata6[21];
-    char stringdata7[11];
+    char stringdata3[14];
+    char stringdata4[9];
+    char stringdata5[4];
+    char stringdata6[5];
+    char stringdata7[8];
+    char stringdata8[5];
+    char stringdata9[24];
+    char stringdata10[17];
+    char stringdata11[5];
+    char stringdata12[21];
+    char stringdata13[11];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSTalkWindowShellENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -67,15 +79,27 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSTalkWindowShellENDCLASS_t qt_me
         QT_MOC_LITERAL(0, 15),  // "TalkWindowShell"
         QT_MOC_LITERAL(16, 19),  // "onEmotionBtnClicked"
         QT_MOC_LITERAL(36, 0),  // ""
-        QT_MOC_LITERAL(37, 23),  // "onTalkWindowItemClicked"
-        QT_MOC_LITERAL(61, 16),  // "QListWidgetItem*"
-        QT_MOC_LITERAL(78, 4),  // "item"
-        QT_MOC_LITERAL(83, 20),  // "onEmotionItemClicked"
-        QT_MOC_LITERAL(104, 10)   // "emotionNum"
+        QT_MOC_LITERAL(37, 13),  // "updateSendMsg"
+        QT_MOC_LITERAL(51, 8),  // "QString&"
+        QT_MOC_LITERAL(60, 3),  // "msg"
+        QT_MOC_LITERAL(64, 4),  // "int&"
+        QT_MOC_LITERAL(69, 7),  // "msgType"
+        QT_MOC_LITERAL(77, 4),  // "file"
+        QT_MOC_LITERAL(82, 23),  // "onTalkWindowItemClicked"
+        QT_MOC_LITERAL(106, 16),  // "QListWidgetItem*"
+        QT_MOC_LITERAL(123, 4),  // "item"
+        QT_MOC_LITERAL(128, 20),  // "onEmotionItemClicked"
+        QT_MOC_LITERAL(149, 10)   // "emotionNum"
     },
     "TalkWindowShell",
     "onEmotionBtnClicked",
     "",
+    "updateSendMsg",
+    "QString&",
+    "msg",
+    "int&",
+    "msgType",
+    "file",
     "onTalkWindowItemClicked",
     "QListWidgetItem*",
     "item",
@@ -92,7 +116,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSTalkWindowShellENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -100,14 +124,18 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSTalkWindowShellENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   32,    2, 0x0a,    1 /* Public */,
-       3,    1,   35,    2, 0x08,    3 /* Private */,
-       6,    1,   38,    2, 0x08,    5 /* Private */,
+       1,    1,   44,    2, 0x0a,    1 /* Public */,
+       3,    3,   47,    2, 0x0a,    3 /* Public */,
+       3,    2,   54,    2, 0x2a,    7 /* Public | MethodCloned */,
+       9,    1,   59,    2, 0x08,   10 /* Private */,
+      12,    1,   62,    2, 0x08,   12 /* Private */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::Bool,    2,
-    QMetaType::Void, 0x80000000 | 4,    5,
-    QMetaType::Void, QMetaType::Int,    7,
+    QMetaType::Void, 0x80000000 | 4, 0x80000000 | 6, QMetaType::QString,    5,    7,    8,
+    QMetaType::Void, 0x80000000 | 4, 0x80000000 | 6,    5,    7,
+    QMetaType::Void, 0x80000000 | 10,   11,
+    QMetaType::Void, QMetaType::Int,   13,
 
        0        // eod
 };
@@ -124,6 +152,15 @@ Q_CONSTINIT const QMetaObject TalkWindowShell::staticMetaObject = { {
         // method 'onEmotionBtnClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<bool, std::false_type>,
+        // method 'updateSendMsg'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'updateSendMsg'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int &, std::false_type>,
         // method 'onTalkWindowItemClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QListWidgetItem *, std::false_type>,
@@ -141,8 +178,10 @@ void TalkWindowShell::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         (void)_t;
         switch (_id) {
         case 0: _t->onEmotionBtnClicked((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
-        case 1: _t->onTalkWindowItemClicked((*reinterpret_cast< std::add_pointer_t<QListWidgetItem*>>(_a[1]))); break;
-        case 2: _t->onEmotionItemClicked((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 1: _t->updateSendMsg((*reinterpret_cast< std::add_pointer_t<QString&>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int&>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3]))); break;
+        case 2: _t->updateSendMsg((*reinterpret_cast< std::add_pointer_t<QString&>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int&>>(_a[2]))); break;
+        case 3: _t->onTalkWindowItemClicked((*reinterpret_cast< std::add_pointer_t<QListWidgetItem*>>(_a[1]))); break;
+        case 4: _t->onEmotionItemClicked((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }
     }
@@ -167,13 +206,13 @@ int TalkWindowShell::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 5)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 3;
+        _id -= 5;
     }
     return _id;
 }

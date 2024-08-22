@@ -1126,4 +1126,40 @@ CMakeFiles/QtQQ.dir/msgwebview.cpp.o: \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QObject \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QJsonValue \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWebChannel.framework/Headers/qwebchannelglobal.h \
-  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWebChannel.framework/Headers/qtwebchannelexports.h
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWebChannel.framework/Headers/qtwebchannelexports.h \
+  /Users/wangrundong/Documents/Projects/QtQQ/windowmanager.h \
+  /Users/wangrundong/Documents/Projects/QtQQ/talkwindowshell.h \
+  /Users/wangrundong/Documents/Projects/QtQQ/basicwindow.h \
+  /Users/wangrundong/Documents/Projects/QtQQ/titlebar.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QLabel \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qlabel.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qframe.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/qpicture.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/qtextdocument.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QPushButton \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qabstractbutton.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QDialog \
+  /Users/wangrundong/Documents/Projects/QtQQ/emotionwindow.h \
+  /Users/wangrundong/Documents/Projects/QtQQ/talkwindowitem.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QListWidgetItem \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qlistwidget.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qlistview.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qabstractitemview.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qabstractscrollarea.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qabstractitemmodel.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qitemselectionmodel.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qabstractitemdelegate.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qstyleoption.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qabstractspinbox.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/qvalidator.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qslider.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qabstractslider.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qstyle.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qtabbar.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qtabwidget.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qrubberband.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/QTcpSocket \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qhostaddress.h

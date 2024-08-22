@@ -1089,6 +1089,13 @@ CMakeFiles/QtQQ.dir/talkwindow.cpp.o: \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qtabbar.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qtabwidget.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qrubberband.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/QTcpSocket \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qtnetwork-config.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qtnetworkexports.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qhostaddress.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QTreeWidgetItem \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qtreewidget.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qtreeview.h \
@@ -1134,10 +1141,7 @@ CMakeFiles/QtQQ.dir/talkwindow.cpp.o: \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWebEngineCore.framework/Headers/qtwebenginecoreglobal.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWebEngineCore.framework/Headers/qtwebenginecore-config.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWebEngineCore.framework/Headers/qwebengineclientcertificateselection.h \
-  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qtnetwork-config.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qsslcertificate.h \
-  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
-  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qtnetworkexports.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qcryptographichash.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qdatetime.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qcalendar.h \
@@ -1199,5 +1203,13 @@ CMakeFiles/QtQQ.dir/talkwindow.cpp.o: \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QMessageBox \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qdialogbuttonbox.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/QSqlQuery \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qsqlquery.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qtsqlglobal.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qtsql-config.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qtsqlexports.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/QSqlQueryModel \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qsqlquerymodel.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QToolTip \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qtooltip.h

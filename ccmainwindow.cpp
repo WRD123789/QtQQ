@@ -28,11 +28,14 @@ public:
     }
 };
 
-CCMainWindow::CCMainWindow(QWidget *parent)
+CCMainWindow::CCMainWindow(QString account, bool isAccountLogin, QWidget *parent)
     : BasicWindow(parent)
     , ui(new Ui::CCMainWindow)
 {
     ui->setupUi(this);
+
+    m_isAccountLogin = isAccountLogin;
+    m_account = account;
 
     setWindowFlags(windowFlags() | Qt::Tool);
     loadStyleSheet("CCMainWindow");
@@ -70,7 +73,8 @@ void CCMainWindow::initControl()
 
     // 获取焦点时不绘制边框
     ui->treeWidget->setStyle(new CustomProxyStyle);
-    setHeadPixmap(":/Resources/MainWindow/head.jpg");
+    QString headPath = getHeadPath();
+    setHeadPixmap(headPath);
     setStatusMenuIcon(":/Resources/MainWindow/StatusSucceeded.png");
 
     // 添加其他 App 图标
@@ -114,7 +118,7 @@ void CCMainWindow::addCompanyDeps(QTreeWidgetItem* pRootGroupItem, int depID)
     QTreeWidgetItem *pChild = new QTreeWidgetItem;
 
     pChild->setData(0, Qt::UserRole, 1);
-    pChild->setData(0, Qt::UserRole + 1, QString::number(quintptr(pChild)));
+    pChild->setData(0, Qt::UserRole + 1, depID);
 
     // 根据部门号获取部门名和头像
     QString sqlStr = QString("SELECT department_name, picture "
@@ -136,9 +140,54 @@ void CCMainWindow::addCompanyDeps(QTreeWidgetItem* pRootGroupItem, int depID)
     ui->treeWidget->setItemWidget(pChild, 0, pContactItem);
 }
 
-void CCMainWindow::setUserName(const QString &name)
+QString CCMainWindow::getHeadPath()
+{
+    QSqlQuery query;
+    QString employeeID;
+    if (m_isAccountLogin) {
+        QString sqlStr = QString("SELECT employeeID "
+                                 "FROM tab_accounts "
+                                 "WHERE account = '%1'").arg(m_account);
+        query.exec(sqlStr);
+        query.next();
+        employeeID = query.value(0).toString();
+    } else {
+        employeeID = m_account;
+    }
+
+    QString sqlStr = QString("SELECT picture "
+                             "FROM tab_employees "
+                             "WHERE employeeID = %1").arg(employeeID);
+    query.exec(sqlStr);
+    query.next();
+
+    return query.value(0).toString();
+}
+
+void CCMainWindow::setUserName()
 {
     ui->nameLabel->adjustSize();
+
+    // 获取登录者姓名
+    QSqlQuery query;
+    QString employeeID;
+    if (m_isAccountLogin) {
+        QString sqlStr = QString("SELECT employeeID "
+                                 "FROM tab_accounts "
+                                 "WHERE account = '%1'").arg(m_account);
+        query.exec(sqlStr);
+        query.next();
+        employeeID = query.value(0).toString();
+    } else {
+        employeeID = m_account;
+    }
+    QString sqlStr = QString("SELECT employee_name "
+                             "FROM tab_employees "
+                             "WHERE employeeID = %1").arg(employeeID);
+    query.exec(sqlStr);
+    query.next();
+    QString name = query.value(0).toString();
+
     // 文本过长时省略
     QString && newName = ui->nameLabel->fontMetrics().elidedText(name, Qt::ElideRight, ui->nameLabel->width());
 
@@ -277,7 +326,7 @@ void CCMainWindow::updateSearchStyle()
 
 void CCMainWindow::resizeEvent(QResizeEvent *event)
 {
-    setUserName(QString::fromLocal8Bit("测试账号"));
+    setUserName();
 
     BasicWindow::resizeEvent(event);
 }
@@ -362,20 +411,6 @@ void CCMainWindow::onItemDoubleClicked(QTreeWidgetItem *item, int column)
 {
     // 判断是不是 `QTreeWidget` 中的子项
     bool isChild = item->data(0, Qt::UserRole).toBool();
-    if (isChild) {
-        QString groupName = m_groupMap.value(item);
-
-        if (groupName == QString::fromLocal8Bit("公司群"))
-            WindowManager::getInstance()->addNewTalkWindow(
-                item->data(0, Qt::UserRole + 1).toString(), COMPANY);
-        else if (groupName == QString::fromLocal8Bit("人事部"))
-            WindowManager::getInstance()->addNewTalkWindow(
-                item->data(0, Qt::UserRole + 1).toString(), PERSONELGROUP);
-        else if (groupName == QString::fromLocal8Bit("研发部"))
-            WindowManager::getInstance()->addNewTalkWindow(
-                item->data(0, Qt::UserRole + 1).toString(), DEVELOPMENTGROUP);
-        else if (groupName == QString::fromLocal8Bit("市场部"))
-            WindowManager::getInstance()->addNewTalkWindow(
-                item->data(0, Qt::UserRole + 1).toString(), MARKETGROUP);
-    }
+    if (isChild)
+        WindowManager::getInstance()->addNewTalkWindow(item->data(0, Qt::UserRole + 1).toString());
 }

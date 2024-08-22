@@ -395,7 +395,9 @@ QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp: /Users/wangrundong/Documents/Proje
 QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp: /Users/wangrundong/Documents/Projects/QtQQ/Resources/MainWindow/emotion/122.png
 QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp: /Users/wangrundong/Documents/Projects/QtQQ/Resources/MainWindow/emotion/21.png
 QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp: /Users/wangrundong/Documents/Projects/QtQQ/Resources/MainWindow/emotion/19.png
+QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp: /Users/wangrundong/Documents/Projects/QtQQ/Resources/MainWindow/MsgHtml/msgtmpl.txt
 QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp: /Users/wangrundong/Documents/Projects/QtQQ/Resources/MainWindow/MsgHtml/ui.css
+QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp: /Users/wangrundong/Documents/Projects/QtQQ/Resources/MainWindow/MsgHtml/recvHtml.txt
 QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp: /Users/wangrundong/Documents/Projects/QtQQ/Resources/MainWindow/MsgHtml/msgleftTmpl.html
 QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp: /Users/wangrundong/Documents/Projects/QtQQ/Resources/MainWindow/MsgHtml/msgFont.txt
 QtQQ_autogen/EWIEGA46WW/qrc_ccmainwindow.cpp: /Users/wangrundong/Documents/Projects/QtQQ/Resources/MainWindow/MsgHtml/msgrightTmpl.html

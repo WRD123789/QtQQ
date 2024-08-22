@@ -24,7 +24,7 @@ private slots:
 private:
     void initControl();
     bool connectDatabase(); // 连接数据库
-    bool verifyAccount();   // 验证账号密码
+    bool verifyAccount(bool &isAccountLogin, QString &account);   // 验证账号密码
 
 private:
     Ui::UserLogin *ui;

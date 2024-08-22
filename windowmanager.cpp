@@ -56,16 +56,16 @@ void WindowManager::addNewTalkWindow(const QString &windowID)
         query.exec(sqlStr);
         // 判断是单聊还是群聊
         if (query.next()) {
-            talkWindow->setWindowName(query.value(0).toString());
-            talkWindowItem->setMsgLabelContent(query.value(1).toString());
+            talkWindow->setWindowName(query.value(1).toString());
+            talkWindowItem->setMsgLabelContent(query.value(0).toString());
         } else {
             sqlStr = QString("SELECT employee_name, employee_sign "
                              "FROM tab_employees "
                              "WHERE employeeID = %1").arg(windowID);
             query.exec(sqlStr);
             query.next();
-            talkWindow->setWindowName(query.value(0).toString());
-            talkWindowItem->setMsgLabelContent(query.value(1).toString());
+            talkWindow->setWindowName(query.value(1).toString());
+            talkWindowItem->setMsgLabelContent(query.value(0).toString());
         }
 
         m_talkWindowShell->addTalkWindow(talkWindow, talkWindowItem, windowID);

@@ -1135,6 +1135,13 @@ CMakeFiles/QtQQ.dir/ccmainwindow.cpp.o: \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QListWidgetItem \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qlistwidget.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qlistview.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/QTcpSocket \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qtnetwork-config.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qtnetworkexports.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qhostaddress.h \
   /Users/wangrundong/Documents/Projects/QtQQ/windowmanager.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QProxyStyle \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qproxystyle.h \

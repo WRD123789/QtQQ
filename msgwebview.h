@@ -49,6 +49,9 @@ public:
 public:
     void appendMsg(const QString &htmlMsg); // 添加新的 HTML 消息到视图中
 
+signals:
+    void signalSendMsg(QString &msg, int &msgType, QString file = "");
+
 private:
     QList<QStringList> parseHtml(const QString &htmlMsg);  // 解析 HTML 格式消息
     QList<QStringList> parseDocNode(const QDomNode &node); // 解析 HTML 节点

@@ -31,7 +31,7 @@ void UserLogin::initControl()
     // 设置圆形头像
     QLabel *headLabel = new QLabel(this);
     headLabel->setFixedSize(QSize(68, 68));
-    QPixmap srcPic(":/Resources/MainWindow/head.jpg");
+    QPixmap srcPic(":/Resources/MainWindow/app/logo.ico");
     QPixmap maskPic(":/Resources/MainWindow/head_mask.png");
     headLabel->setPixmap(getRoundImage(srcPic, maskPic, headLabel->size()));
     headLabel->move(width() / 2 - 34, ui->titleWidget->height() - 34);
@@ -61,7 +61,7 @@ bool UserLogin::connectDatabase()
     return true;
 }
 
-bool UserLogin::verifyAccount()
+bool UserLogin::verifyAccount(bool &isAccountLogin, QString &account)
 {
     QString userInput = ui->editUserAccount->text();
     QString passwordInput = ui->editPassword->text();
@@ -79,6 +79,8 @@ bool UserLogin::verifyAccount()
 
         if (password == passwordInput) {
             gLoginEmployeeID = userInput;
+            account = userInput;
+            isAccountLogin = false;
             return true;
         } else {
             return false;
@@ -96,6 +98,8 @@ bool UserLogin::verifyAccount()
 
         if (password == passwordInput) {
             gLoginEmployeeID = query.value(1).toString();
+            account = userInput;
+            isAccountLogin = true;
             return true;
         } else {
             return false;
@@ -107,8 +111,10 @@ bool UserLogin::verifyAccount()
 
 void UserLogin::onLoginBtnClicked()
 {
+    bool isAccountLogin;
+    QString account;
     // 判断用户输入的账号和密码是否正确
-    if (!verifyAccount()) {
+    if (!verifyAccount(isAccountLogin, account)) {
         QMessageBox::warning(NULL, QString::fromLocal8Bit("提示"),
                              QString::fromLocal8Bit("输入的账号或密码有误!"));
         return;
@@ -116,6 +122,6 @@ void UserLogin::onLoginBtnClicked()
 
     close();
 
-    CCMainWindow *mainWindow = new CCMainWindow;
+    CCMainWindow *mainWindow = new CCMainWindow(account, isAccountLogin);
     mainWindow->show();
 }

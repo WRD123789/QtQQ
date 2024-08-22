@@ -1088,6 +1088,13 @@ CMakeFiles/QtQQ.dir/talkwindowshell.cpp.o: \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qtabbar.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qtabwidget.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qrubberband.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/QTcpSocket \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qtnetwork-config.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qtnetworkexports.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qhostaddress.h \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/include/./ui_talkwindowshell.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QVariant \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QApplication \
@@ -1120,4 +1127,45 @@ CMakeFiles/QtQQ.dir/talkwindowshell.cpp.o: \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QTreeWidgetItem \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qtreewidget.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qtreeview.h \
-  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qtreewidgetitemiterator.h
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qtreewidgetitemiterator.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QFile \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qfile.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qfiledevice.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/filesystem \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__filesystem/file_status.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__filesystem/file_type.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__filesystem/perms.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__filesystem/file_time_type.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__filesystem/filesystem_error.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__filesystem/path.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/iomanip \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/istream \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/ostream \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/bitset \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__filesystem/operations.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__filesystem/perm_options.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__filesystem/space_info.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__filesystem/directory_iterator.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__filesystem/directory_options.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/c++/v1/__filesystem/u8path.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QMessageBox \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qmessagebox.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qdialogbuttonbox.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QSettings \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qsettings.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/QSqlQuery \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qsqlquery.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qtsqlglobal.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qtsql-config.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qtsqlexports.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QDir \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qdir.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qfileinfo.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qdatetime.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qcalendar.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qtimezone.h

@@ -7,6 +7,7 @@
 
 #include <QWidget>
 #include <QListWidgetItem>
+#include <QTcpSocket>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -42,9 +43,14 @@ public:
 
 private:
     void initControl();
+    void initTcpSocket(); // 初始化 TCP Socket
+    bool createJsFile(QStringList &employeeList);
+    QStringList getAllEmployeeID();
 
 public slots:
     void onEmotionBtnClicked(bool); // 表情按钮被点击后执行
+    // 客户端发送 TCP 数据
+    void updateSendMsg(QString &msg, int &msgType, QString file = "");
 
 private slots:
     void onTalkWindowItemClicked(QListWidgetItem *item); // 左侧列表点击后执行
@@ -57,6 +63,9 @@ private:
     QMap<QListWidgetItem*, QWidget*> m_talkWindowItemMap;
     // 表情窗口
     EmotionWindow *m_emotionWindow;
+
+private:
+    QTcpSocket *m_tcpClientSocket; // TCP Socket
 };
 
 #endif // TALKWINDOWSHELL_H

@@ -5,6 +5,7 @@
 #include <QJsonObject>
 #include <QJsonDocument>
 #include <QWebChannel>
+#include <windowmanager.h>
 
 MsgHtmlObj::MsgHtmlObj(QObject *parent)
     : QObject{parent}
@@ -62,6 +63,9 @@ MsgWebView::MsgWebView(QWidget *parent)
     channel->registerObject("external", m_msgHtmlObj);
     this->page()->setWebChannel(channel);
 
+    TalkWindowShell *talkWindowShell = WindowManager::getInstance()->getTalkWindowShell();
+    connect(this, &MsgWebView::signalSendMsg, talkWindowShell, &TalkWindowShell::updateSendMsg);
+
     // 初始化消息页面
     this->load(QUrl("qrc:/Resources/MainWindow/MsgHtml/msgTmpl.html"));
 }
@@ -75,10 +79,32 @@ void MsgWebView::appendMsg(const QString &htmlMsg)
     QString msg;
     const QList<QStringList> msgList = parseHtml(htmlMsg);
 
+    int msgType = 1;    // 传输数据的类型, 0 表情, 1 文本, 2 文件
+    QString sendData;   // 要发送的数据
+    int emotionNum = 0; // 表情的数量
+
     for (int i = 0; i < msgList.length(); i += 1) {
         if (msgList.at(i).at(0) == "img") {
             QString imagePath = msgList.at(i).at(1);
             QPixmap pix;
+
+            // 获取表情文件名
+            QString emotionDirPath = "qrc:/Resources/MainWindow/emotion/";
+            int pos = emotionDirPath.size();
+            QString emotionFileName = imagePath.mid(pos);
+            emotionFileName.replace(".png", ""); // 去掉 .png
+            // 用 0 填充表情文件名, 使其长度为 3. 如, 23 -> 023
+            int nameLength = emotionFileName.length();
+            if (nameLength == 1)
+                sendData += "00" + emotionFileName;
+            else if (nameLength == 2)
+                sendData += "0" + emotionFileName;
+            else
+                sendData += emotionFileName;
+
+            msgType = 0;
+            emotionNum += 1;
+
             // 根据图片路径中有无 qrc 来处理
             if (imagePath.left(3) == "qrc")
                 pix.load(imagePath.mid(3));
@@ -91,6 +117,8 @@ void MsgWebView::appendMsg(const QString &htmlMsg)
             msg += imageMsg;
         } else if (msgList.at(i).at(0) == "text") {
             msg += msgList.at(i).at(1);
+
+            sendData += msg;
         }
     }
 
@@ -98,6 +126,8 @@ void MsgWebView::appendMsg(const QString &htmlMsg)
 
     const QString &resMsg = QJsonDocument(msgObj).toJson(QJsonDocument::Compact);
     this->page()->runJavaScript(QString("appendHtml(%1)").arg(resMsg));
+
+    emit signalSendMsg(sendData, msgType);
 }
 
 QList<QStringList> MsgWebView::parseHtml(const QString &htmlMsg)

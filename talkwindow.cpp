@@ -8,6 +8,7 @@
 #include <QFile>
 #include <QMessageBox>
 #include <QSqlQuery>
+#include <QSqlQueryModel>
 #include <QToolTip>
 
 TalkWindow::TalkWindow(QWidget *parent, const QString &windowID)
@@ -106,12 +107,79 @@ void TalkWindow::initGroupTalkStatus()
                              "FROM tab_department "
                              "WHERE departmentID = %1").arg(m_windowID);
     query.exec(sqlStr);
+    if (query.next())
+        m_isGroupTalk = true;
+    else
+        m_isGroupTalk = false;
+}
 
+int TalkWindow::getCompDepID()
+{
+    QSqlQuery query;
+    QString sqlStr = QString("SELECT departmentID "
+                             "FROM tab_department "
+                             "WHERE department_name = '公司群'");
+    query.exec(sqlStr);
+    query.next();
+
+    return query.value(0).toInt();
 }
 
 void TalkWindow::initTalkWindow()
 {
+    // 先构造根项
+    QTreeWidgetItem* pRootItem = new QTreeWidgetItem;
 
+    pRootItem->setChildIndicatorPolicy(QTreeWidgetItem::ShowIndicator);
+    pRootItem->setData(0, Qt::UserRole, 0);
+
+    RootContactItem* pItemName = new RootContactItem(false, ui->treeWidget);
+
+    ui->treeWidget->setFixedHeight(646);
+
+    // 获取群的名称
+    QString strGroupName;
+    QSqlQuery queryGroupName(QString("SELECT department_name "
+                                     "FROM tab_department "
+                                     "WHERE departmentID = %1").arg(m_windowID));
+    queryGroupName.exec();
+
+    if (queryGroupName.next())
+        strGroupName = queryGroupName.value(0).toString();
+
+    QSqlQueryModel queryEmployeeModel;
+
+    // 针对公司群单独处理
+    if (getCompDepID() == m_windowID.toInt())
+        queryEmployeeModel.setQuery("SELECT employeeID "
+                                    "FROM tab_employees "
+                                    "WHERE status = 1");
+    else
+        queryEmployeeModel.setQuery(QString("SELECT employeeID "
+                                            "FROM tab_employees "
+                                            "WHERE status = 1 "
+                                            "AND departmentID = %1")
+                                        .arg(m_windowID));
+
+    // 获取群聊中当前员工的数量
+    int nEmployeeNum = queryEmployeeModel.rowCount();
+
+    // 设置群聊名称
+    QString qsGroupName = QString::fromLocal8Bit("%1 %2/%3")
+                              .arg(strGroupName).arg(0).arg(nEmployeeNum);
+    pItemName->setText(qsGroupName);
+
+    // 插入分组节点
+    ui->treeWidget->addTopLevelItem(pRootItem);
+    ui->treeWidget->setItemWidget(pRootItem, 0, pItemName);
+
+    pRootItem->setExpanded(true);
+
+    for (int i = 0; i < nEmployeeNum; i++) {
+        QModelIndex modelindex = queryEmployeeModel.index(i, 0);
+        int employeeID = queryEmployeeModel.data(modelindex).toInt();
+        addPeopleInfo(pRootItem,employeeID);
+    }
 }
 
 void TalkWindow::initPToPTalk()
@@ -124,23 +192,31 @@ void TalkWindow::initPToPTalk()
     skinLabel->setFixedSize(ui->widget->size());
 }
 
-void TalkWindow::addPeopleInfo(QTreeWidgetItem *pRootGroupItem)
+void TalkWindow::addPeopleInfo(QTreeWidgetItem *pRootGroupItem, int employeeID)
 {
     QTreeWidgetItem *pChild = new QTreeWidgetItem;
 
     pChild->setData(0, Qt::UserRole, 1);
-    pChild->setData(0, Qt::UserRole + 1, QString::number(quintptr(pChild)));
+    pChild->setData(0, Qt::UserRole + 1, employeeID);
+
+    QString userName, sign, headPath;
+    QSqlQuery query;
+    QString sqlStr = QString("SELECT employee_name, employee_sign, picture "
+                             "FROM tab_employees "
+                             "WHERE employeeID = %1").arg(employeeID);
+    query.exec(sqlStr);
+    query.next();
+    userName = query.value(0).toString();
+    sign = query.value(1).toString();
+    headPath = query.value(2).toString();
 
     ContactItem *pContactItem = new ContactItem(ui->treeWidget);
-    QPixmap head_mask(":/Resources/MainWindow/head_mask.png");
-    QPixmap head = CommonUtils::getRoundImage(QPixmap(":/Resources/MainWindow/head.jpg"),
-                                 head_mask, pContactItem->getHeadLabelSize());
+    QPixmap headMask(":/Resources/MainWindow/head_mask.png");
+    QPixmap head = CommonUtils::getRoundImage(QPixmap(headPath),
+                                 headMask, pContactItem->getHeadLabelSize());
     pContactItem->setHeadPixmap(head);
-
-    // 临时静态数据
-    static int i = 0;
-    pContactItem->setUserName(QString::fromLocal8Bit("测试%1").arg(i++));
-    pContactItem->setSignName(QString::fromLocal8Bit(""));
+    pContactItem->setUserName(userName);
+    pContactItem->setSignName(sign);
 
     pRootGroupItem->addChild(pChild);
     ui->treeWidget->setItemWidget(pChild, 0, pContactItem);
