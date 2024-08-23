@@ -10,7 +10,8 @@
 #include <QSqlQuery>
 #include <QDir>
 
-const int gTcpPort = 6666;
+extern QString gLoginEmployeeID;
+const int gTcpPort = 8888;
 
 TalkWindowShell::TalkWindowShell(QWidget *parent)
     : BasicWindow{parent}
@@ -205,6 +206,20 @@ QStringList TalkWindowShell::getAllEmployeeID()
     return list;
 }
 
+bool TalkWindowShell::isDepartment(QString &windowID)
+{
+    QSqlQuery query;
+    QString sqlStr = QString("SELECT * "
+                             "FROM tab_department "
+                             "WHERE departmentID = %1").arg(windowID);
+    query.exec(sqlStr);
+
+    if (query.next())
+        return true;
+    else
+        return false;
+}
+
 void TalkWindowShell::onEmotionBtnClicked(bool)
 {
     m_emotionWindow->setVisible(!m_emotionWindow->isVisible());
@@ -216,9 +231,60 @@ void TalkWindowShell::onEmotionBtnClicked(bool)
     m_emotionWindow->move(emotionPoint);
 }
 
-void TalkWindowShell::updateSendMsg(QString &msg, int &msgType, QString file)
+// msgType: 0 表情, 1 文本, 2 文件
+void TalkWindowShell::updateSendMsg(QString &msg, int &msgType, QString fileName)
 {
+    TalkWindow *curTalkWindow = dynamic_cast<TalkWindow*>(ui->rightStackedWidget->currentWidget());
+    QString windowID = curTalkWindow->getWindowID();
 
+    QString groupFlag; // 群聊标志, 1 群聊, 0 单聊
+    if (isDepartment(windowID))
+        groupFlag = "1";
+    else
+        groupFlag = "0";
+
+    int dataLength = msg.length();
+    int lenghtWidth = QString::number(dataLength).length(); // 数据长度的宽度
+    QString strDataLength;
+    QString sendData;
+
+    // 保证数据长度的宽度始终为 5 位, 方便服务端取出数据长度
+    if (msgType == 1) {
+        // 发送文本信息
+        // 文本数据包格式: 群聊标志 + 发信息员工号 + 收信息员工号/群号 + 数据类型 + 数据长度 + 数据
+        if (lenghtWidth == 1)
+            strDataLength = "0000" + QString::number(dataLength);
+        else if (lenghtWidth == 2)
+            strDataLength = "000" + QString::number(dataLength);
+        else if (lenghtWidth == 3)
+            strDataLength = "00" + QString::number(dataLength);
+        else if (lenghtWidth == 4)
+            strDataLength = "0" + QString::number(dataLength);
+        else if (lenghtWidth == 5)
+            strDataLength = QString::number(dataLength);
+        else
+            QMessageBox::information(this, QString("提示"),
+                                     QString::fromLocal8Bit("不合理的数据长度!"));
+
+        sendData = groupFlag + gLoginEmployeeID + windowID + "1" + strDataLength + msg;
+    } else if (msgType == 0) {
+        // 发送表情信息
+        // 表情数据包格式: 群聊标志 + 发信息员工号 + 收信息员工号/群聊 + 数据类型 + 表情个数 + "images" + 数据
+        sendData = groupFlag + gLoginEmployeeID + windowID + "0" + msg;
+    } else if (msgType == 2) {
+        // 发送文件信息
+        // 文件数据包格式: 群聊标志 + 发信息员工号 + 收信息员工号/群聊 +
+        // 数据类型 + 文件长度 + "bytes" + 文件名称 + "data_begin" + 文件内容
+        QByteArray array = msg.toUtf8();
+        QString fileLength = QString::number(array.length());
+        sendData = groupFlag + gLoginEmployeeID + windowID + "2" + fileLength + "bytes" +
+                   fileName + "data_begin" + msg;
+    }
+
+    QByteArray dataArray;
+    dataArray.resize(sendData.length());
+    dataArray = sendData.toUtf8();
+    m_tcpClientSocket->write(dataArray);
 }
 
 void TalkWindowShell::onTalkWindowItemClicked(QListWidgetItem *item)

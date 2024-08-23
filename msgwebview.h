@@ -47,7 +47,7 @@ public:
     ~MsgWebView();
 
 public:
-    void appendMsg(const QString &htmlMsg); // 添加新的 HTML 消息到视图中
+    void appendMsg(const QString &htmlMsg, QString strObj = "0"); // 添加新的 HTML 消息到视图中
 
 signals:
     void signalSendMsg(QString &msg, int &msgType, QString file = "");

@@ -21,6 +21,7 @@ public:
 public:
     void addEmotionImage(int emotionNum);
     void setWindowName(const QString &name);
+    inline QString getWindowID() { return m_windowID; };
 
 public slots:
     void onSetEmotionBtnStatus();

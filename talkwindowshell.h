@@ -46,11 +46,12 @@ private:
     void initTcpSocket(); // 初始化 TCP Socket
     bool createJsFile(QStringList &employeeList);
     QStringList getAllEmployeeID();
+    bool isDepartment(QString &windowID);
 
 public slots:
     void onEmotionBtnClicked(bool); // 表情按钮被点击后执行
     // 客户端发送 TCP 数据
-    void updateSendMsg(QString &msg, int &msgType, QString file = "");
+    void updateSendMsg(QString &msg, int &msgType, QString fileName = "");
 
 private slots:
     void onTalkWindowItemClicked(QListWidgetItem *item); // 左侧列表点击后执行

@@ -47,7 +47,7 @@ constexpr auto qt_meta_stringdata_CLASSTalkWindowShellENDCLASS = QtMocHelpers::s
     "msg",
     "int&",
     "msgType",
-    "file",
+    "fileName",
     "onTalkWindowItemClicked",
     "QListWidgetItem*",
     "item",
@@ -65,7 +65,7 @@ struct qt_meta_stringdata_CLASSTalkWindowShellENDCLASS_t {
     char stringdata5[4];
     char stringdata6[5];
     char stringdata7[8];
-    char stringdata8[5];
+    char stringdata8[9];
     char stringdata9[24];
     char stringdata10[17];
     char stringdata11[5];
@@ -84,12 +84,12 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSTalkWindowShellENDCLASS_t qt_me
         QT_MOC_LITERAL(60, 3),  // "msg"
         QT_MOC_LITERAL(64, 4),  // "int&"
         QT_MOC_LITERAL(69, 7),  // "msgType"
-        QT_MOC_LITERAL(77, 4),  // "file"
-        QT_MOC_LITERAL(82, 23),  // "onTalkWindowItemClicked"
-        QT_MOC_LITERAL(106, 16),  // "QListWidgetItem*"
-        QT_MOC_LITERAL(123, 4),  // "item"
-        QT_MOC_LITERAL(128, 20),  // "onEmotionItemClicked"
-        QT_MOC_LITERAL(149, 10)   // "emotionNum"
+        QT_MOC_LITERAL(77, 8),  // "fileName"
+        QT_MOC_LITERAL(86, 23),  // "onTalkWindowItemClicked"
+        QT_MOC_LITERAL(110, 16),  // "QListWidgetItem*"
+        QT_MOC_LITERAL(127, 4),  // "item"
+        QT_MOC_LITERAL(132, 20),  // "onEmotionItemClicked"
+        QT_MOC_LITERAL(153, 10)   // "emotionNum"
     },
     "TalkWindowShell",
     "onEmotionBtnClicked",
@@ -99,7 +99,7 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSTalkWindowShellENDCLASS_t qt_me
     "msg",
     "int&",
     "msgType",
-    "file",
+    "fileName",
     "onTalkWindowItemClicked",
     "QListWidgetItem*",
     "item",

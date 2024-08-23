@@ -73,18 +73,20 @@ MsgWebView::MsgWebView(QWidget *parent)
 MsgWebView::~MsgWebView()
 {}
 
-void MsgWebView::appendMsg(const QString &htmlMsg)
+void MsgWebView::appendMsg(const QString &htmlMsg, QString strObj)
 {
     QJsonObject msgObj;
     QString msg;
     const QList<QStringList> msgList = parseHtml(htmlMsg);
 
-    int msgType = 1;    // 传输数据的类型, 0 表情, 1 文本, 2 文件
-    QString sendData;   // 要发送的数据
-    int emotionNum = 0; // 表情的数量
+    int msgType = 1;        // 传输数据的类型, 0 表情, 1 文本, 2 文件
+    QString sendData;       // 要发送的数据
+    int emotionNum = 0;     // 表情的数量
+    bool isEmotion = false; // 是否是表情
 
     for (int i = 0; i < msgList.length(); i += 1) {
         if (msgList.at(i).at(0) == "img") {
+            isEmotion = true;
             QString imagePath = msgList.at(i).at(1);
             QPixmap pix;
 
@@ -125,9 +127,19 @@ void MsgWebView::appendMsg(const QString &htmlMsg)
     msgObj.insert("MSG", msg);
 
     const QString &resMsg = QJsonDocument(msgObj).toJson(QJsonDocument::Compact);
-    this->page()->runJavaScript(QString("appendHtml(%1)").arg(resMsg));
 
-    emit signalSendMsg(sendData, msgType);
+    if (strObj == "0") {
+        // 发信息
+        this->page()->runJavaScript(QString("appendHtml0(%1)").arg(resMsg));
+
+        if (isEmotion)
+            sendData = QString::number(emotionNum) + "images" + sendData;
+
+        emit signalSendMsg(sendData, msgType);
+    } else {
+        // 接收信息
+        this->page()->runJavaScript(QString("recvHtml_%1(%2)").arg(strObj, resMsg));
+    }
 }
 
 QList<QStringList> MsgWebView::parseHtml(const QString &htmlMsg)
