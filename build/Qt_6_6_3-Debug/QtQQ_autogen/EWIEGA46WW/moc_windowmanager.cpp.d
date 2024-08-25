@@ -244,12 +244,14 @@
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Versions/A/Headers/qvalidator.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Versions/A/Headers/qwindowdefs.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Versions/A/Headers/QTcpSocket \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Versions/A/Headers/QUdpSocket \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Versions/A/Headers/qabstractsocket.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Versions/A/Headers/qhostaddress.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Versions/A/Headers/qtcpsocket.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Versions/A/Headers/qtnetwork-config.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Versions/A/Headers/qtnetworkexports.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Versions/A/Headers/qtnetworkglobal.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Versions/A/Headers/qudpsocket.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Versions/A/Headers/QDialog \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Versions/A/Headers/QLabel \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Versions/A/Headers/QListWidgetItem \

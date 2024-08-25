@@ -47,7 +47,6 @@ void QMsgTextEdit::addEmotionUrl(int emotionNum)
 
         updateGeometry();
     }
-
 }
 
 void QMsgTextEdit::deleteAllEmotionImage()

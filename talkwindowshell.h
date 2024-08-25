@@ -8,6 +8,7 @@
 #include <QWidget>
 #include <QListWidgetItem>
 #include <QTcpSocket>
+#include <QUdpSocket>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -44,9 +45,11 @@ public:
 private:
     void initControl();
     void initTcpSocket(); // 初始化 TCP Socket
+    void initUdpSocket(); // 初始化 UDP
     bool createJsFile(QStringList &employeeList);
     QStringList getAllEmployeeID();
     bool isDepartment(QString &windowID);
+    void handleReceiveMsg(int senderEmployeeID, int msgType, QString msg);
 
 public slots:
     void onEmotionBtnClicked(bool); // 表情按钮被点击后执行
@@ -56,6 +59,7 @@ public slots:
 private slots:
     void onTalkWindowItemClicked(QListWidgetItem *item); // 左侧列表点击后执行
     void onEmotionItemClicked(int emotionNum);           // 表情被选中后执行
+    void processPendingData();                           // 处理 UDP Socket 收到的数据
 
 private:
     Ui::TalkWindowClass *ui;
@@ -67,6 +71,7 @@ private:
 
 private:
     QTcpSocket *m_tcpClientSocket; // TCP Socket
+    QUdpSocket *m_udpReceiver;     // UDP Socket
 };
 
 #endif // TALKWINDOWSHELL_H

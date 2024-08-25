@@ -15,6 +15,7 @@
 #include "QMouseEvent"
 
 extern QString gLoginEmployeeID;
+QString gLoginHeadPath;
 
 class CustomProxyStyle : public QProxyStyle {
 public:
@@ -74,6 +75,7 @@ void CCMainWindow::initControl()
     // 获取焦点时不绘制边框
     ui->treeWidget->setStyle(new CustomProxyStyle);
     QString headPath = getHeadPath();
+    gLoginHeadPath = headPath;
     setHeadPixmap(headPath);
     setStatusMenuIcon(":/Resources/MainWindow/StatusSucceeded.png");
 

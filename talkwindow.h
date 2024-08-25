@@ -45,6 +45,8 @@ private:
     QString m_windowID;
     bool m_isGroupTalk; // 是否为群聊
     QMap<QTreeWidgetItem*, QString> m_groupPeopleMap; // 包含群组中所有人员的名字
+
+    friend class TalkWindowShell;
 };
 
 #endif // TALKWINDOW_H

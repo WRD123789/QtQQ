@@ -7,7 +7,6 @@ var external_1004 = null;
 var external_1005 = null;
 var external_1006 = null;
 var external_1007 = null;
-var external_1008 = null;
 var external_1009 = null;
 
 
@@ -33,7 +32,6 @@ external_1004 = channel.objects.external_1004;
 external_1005 = channel.objects.external_1005;
 external_1006 = channel.objects.external_1006;
 external_1007 = channel.objects.external_1007;
-external_1008 = channel.objects.external_1008;
 external_1009 = channel.objects.external_1009;
 
 	}
@@ -74,10 +72,6 @@ function recvHtml_1006(msg){
 };
 function recvHtml_1007(msg){
 	$("#placeholder").append(external_1007.msgLHtmlTmpl.format(msg));
-	window.scrollTo(0,document.body.scrollHeight); ;  
-};
-function recvHtml_1008(msg){
-	$("#placeholder").append(external_1008.msgLHtmlTmpl.format(msg));
 	window.scrollTo(0,document.body.scrollHeight); ;  
 };
 function recvHtml_1009(msg){

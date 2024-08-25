@@ -1162,4 +1162,12 @@ CMakeFiles/QtQQ.dir/msgwebview.cpp.o: \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/QTcpSocket \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qtcpsocket.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qabstractsocket.h \
-  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qhostaddress.h
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qhostaddress.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/QUdpSocket \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Headers/qudpsocket.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/QSqlQuery \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qsqlquery.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qtsqlglobal.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qtsql-config.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qtsqlexports.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qsqldatabase.h

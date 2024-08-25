@@ -303,6 +303,7 @@ QtQQ_autogen/timestamp: \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Versions/A/Headers/qvalidator.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Versions/A/Headers/qwindowdefs.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Versions/A/Headers/QTcpSocket \
+	/Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Versions/A/Headers/QUdpSocket \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Versions/A/Headers/qabstractsocket.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Versions/A/Headers/qhostaddress.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Versions/A/Headers/qssl.h \
@@ -311,6 +312,7 @@ QtQQ_autogen/timestamp: \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Versions/A/Headers/qtnetwork-config.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Versions/A/Headers/qtnetworkexports.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Versions/A/Headers/qtnetworkglobal.h \
+	/Users/wangrundong/Qt/6.6.3/macos/lib/QtNetwork.framework/Versions/A/Headers/qudpsocket.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtWebEngineCore.framework/Versions/A/Headers/qtwebenginecore-config.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtWebEngineCore.framework/Versions/A/Headers/qtwebenginecoreglobal.h \
 	/Users/wangrundong/Qt/6.6.3/macos/lib/QtWebEngineCore.framework/Versions/A/Headers/qwebengineclientcertificateselection.h \

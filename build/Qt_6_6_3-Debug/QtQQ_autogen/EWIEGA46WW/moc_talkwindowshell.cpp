@@ -52,11 +52,12 @@ constexpr auto qt_meta_stringdata_CLASSTalkWindowShellENDCLASS = QtMocHelpers::s
     "QListWidgetItem*",
     "item",
     "onEmotionItemClicked",
-    "emotionNum"
+    "emotionNum",
+    "processPendingData"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSTalkWindowShellENDCLASS_t {
-    uint offsetsAndSizes[28];
+    uint offsetsAndSizes[30];
     char stringdata0[16];
     char stringdata1[20];
     char stringdata2[1];
@@ -71,6 +72,7 @@ struct qt_meta_stringdata_CLASSTalkWindowShellENDCLASS_t {
     char stringdata11[5];
     char stringdata12[21];
     char stringdata13[11];
+    char stringdata14[19];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSTalkWindowShellENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -89,7 +91,8 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSTalkWindowShellENDCLASS_t qt_me
         QT_MOC_LITERAL(110, 16),  // "QListWidgetItem*"
         QT_MOC_LITERAL(127, 4),  // "item"
         QT_MOC_LITERAL(132, 20),  // "onEmotionItemClicked"
-        QT_MOC_LITERAL(153, 10)   // "emotionNum"
+        QT_MOC_LITERAL(153, 10),  // "emotionNum"
+        QT_MOC_LITERAL(164, 18)   // "processPendingData"
     },
     "TalkWindowShell",
     "onEmotionBtnClicked",
@@ -104,7 +107,8 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSTalkWindowShellENDCLASS_t qt_me
     "QListWidgetItem*",
     "item",
     "onEmotionItemClicked",
-    "emotionNum"
+    "emotionNum",
+    "processPendingData"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -116,7 +120,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSTalkWindowShellENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -124,11 +128,12 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSTalkWindowShellENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   44,    2, 0x0a,    1 /* Public */,
-       3,    3,   47,    2, 0x0a,    3 /* Public */,
-       3,    2,   54,    2, 0x2a,    7 /* Public | MethodCloned */,
-       9,    1,   59,    2, 0x08,   10 /* Private */,
-      12,    1,   62,    2, 0x08,   12 /* Private */,
+       1,    1,   50,    2, 0x0a,    1 /* Public */,
+       3,    3,   53,    2, 0x0a,    3 /* Public */,
+       3,    2,   60,    2, 0x2a,    7 /* Public | MethodCloned */,
+       9,    1,   65,    2, 0x08,   10 /* Private */,
+      12,    1,   68,    2, 0x08,   12 /* Private */,
+      14,    0,   71,    2, 0x08,   14 /* Private */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::Bool,    2,
@@ -136,6 +141,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSTalkWindowShellENDCLASS[] = {
     QMetaType::Void, 0x80000000 | 4, 0x80000000 | 6,    5,    7,
     QMetaType::Void, 0x80000000 | 10,   11,
     QMetaType::Void, QMetaType::Int,   13,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -166,7 +172,9 @@ Q_CONSTINIT const QMetaObject TalkWindowShell::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<QListWidgetItem *, std::false_type>,
         // method 'onEmotionItemClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'processPendingData'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
 } };
@@ -182,6 +190,7 @@ void TalkWindowShell::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         case 2: _t->updateSendMsg((*reinterpret_cast< std::add_pointer_t<QString&>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int&>>(_a[2]))); break;
         case 3: _t->onTalkWindowItemClicked((*reinterpret_cast< std::add_pointer_t<QListWidgetItem*>>(_a[1]))); break;
         case 4: _t->onEmotionItemClicked((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 5: _t->processPendingData(); break;
         default: ;
         }
     }
@@ -206,13 +215,13 @@ int TalkWindowShell::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 6;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 6)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 5;
+        _id -= 6;
     }
     return _id;
 }

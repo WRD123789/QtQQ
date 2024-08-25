@@ -12,7 +12,7 @@ class MsgHtmlObj : public QObject {
     Q_PROPERTY(QString msgLHtmlTmpl MEMBER m_msgLHtmlTmpl NOTIFY signalMsgHtml)
     Q_PROPERTY(QString msgRHtmlTmpl MEMBER m_msgRHtmlTmpl NOTIFY signalMsgHtml)
 public:
-    MsgHtmlObj(QObject * parent);
+    MsgHtmlObj(QObject * parent, QString headPath = "");
 
 signals:
     void signalMsgHtml(const QString &html); // 通知外部组件有新的 HTML 消息需要显示
@@ -24,6 +24,7 @@ private:
 private:
     QString m_msgLHtmlTmpl; // 收到的信息
     QString m_msgRHtmlTmpl; // 发出的信息
+    QString m_headPath;     // 发送信息的员工的头像路径
 };
 
 // 控制网页的内容加载, 确保只加载来自 qrc 资源的 URL
@@ -57,6 +58,7 @@ private:
     QList<QStringList> parseDocNode(const QDomNode &node); // 解析 HTML 节点
 
     MsgHtmlObj *m_msgHtmlObj;
+    QWebChannel *m_channel;
 };
 
 #endif // MSGWEBVIEW_H

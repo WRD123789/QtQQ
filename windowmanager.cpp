@@ -46,8 +46,12 @@ void WindowManager::addNewTalkWindow(const QString &windowID)
 
     QWidget *widget = findWindow(windowID);
     if (widget == nullptr) {
+        m_creatingTalkWindowID = windowID;
         TalkWindow *talkWindow = new TalkWindow(m_talkWindowShell, windowID);
+        addWindow(windowID, talkWindow);
         TalkWindowItem *talkWindowItem = new TalkWindowItem(talkWindow);
+
+        m_creatingTalkWindowID = "";
 
         QSqlQuery query;
         QString sqlStr = QString("SELECT department_name, sign "

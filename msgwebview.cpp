@@ -6,17 +6,25 @@
 #include <QJsonDocument>
 #include <QWebChannel>
 #include <windowmanager.h>
+#include <QSqlQuery>
 
-MsgHtmlObj::MsgHtmlObj(QObject *parent)
+extern QString gLoginHeadPath;
+
+MsgHtmlObj::MsgHtmlObj(QObject *parent, QString headPath)
     : QObject{parent}
 {
+    m_headPath = headPath;
+
     initHtmlTmpl();
 }
 
 void MsgHtmlObj::initHtmlTmpl()
 {
     m_msgLHtmlTmpl = getMsgTmplHtml("msgleftTmpl");
+    m_msgLHtmlTmpl.replace("%1",  "http://localhost:8000" + m_headPath);
+
     m_msgRHtmlTmpl = getMsgTmplHtml("msgrightTmpl");
+    m_msgRHtmlTmpl.replace("%1", "http://localhost:8000" +  gLoginHeadPath);
 }
 
 QString MsgHtmlObj::getMsgTmplHtml(const QString &code)
@@ -49,6 +57,7 @@ bool MsgWebPage::acceptNavigationRequest(const QUrl &url, NavigationType type, b
 
 MsgWebView::MsgWebView(QWidget *parent)
     : QWebEngineView{parent}
+    , m_channel(new QWebChannel(this))
 {
     // 将 `page` 设置为当前 `QWebEngineView` 的页面对象
     // 此时 `QWebEngineView` 就会使用 `MsgWebPage` 类来渲染和处理网页
@@ -56,15 +65,73 @@ MsgWebView::MsgWebView(QWidget *parent)
     setPage(page);
 
     // `QWebChannel` 用于在 Qt 应用程序和网页之间建立通信通道
-    QWebChannel *channel = new QWebChannel(this);
     m_msgHtmlObj = new MsgHtmlObj(this);
     // 将 `m_msgHtmlObj` 注册到 `QWebChannel` 中
     // 此时, 网页中的 JavaScript 代码就可以通过 external 这个标识符访问到 `m_msgHtmlObj` 对象
-    channel->registerObject("external", m_msgHtmlObj);
-    this->page()->setWebChannel(channel);
+    m_channel->registerObject("external0", m_msgHtmlObj);
 
     TalkWindowShell *talkWindowShell = WindowManager::getInstance()->getTalkWindowShell();
     connect(this, &MsgWebView::signalSendMsg, talkWindowShell, &TalkWindowShell::updateSendMsg);
+
+    // 当前正在构建的聊天窗口的窗口号
+    QString talkWindowID = WindowManager::getInstance()->getCreatingTalkWindowID();
+
+    // 获取公司群窗口号
+    QSqlQuery query;
+    QString sqlStr = QString("SELECT departmentID "
+                             "FROM tab_department "
+                             "WHERE department_name = '公司群'");
+    query.exec(sqlStr);
+    query.next();
+    QString compDepID = query.value(0).toString();
+
+    QString headPath, external;
+    bool isGroup = false;
+    if (talkWindowID == compDepID) {
+        isGroup = true;
+
+        sqlStr = QString("SELECT employeeID, picture "
+                         "FROM tab_employees "
+                         "WHERE status = 1");
+    } else {
+        sqlStr = QString("SELECT * "
+                         "FROM tab_department "
+                         "WHERE departmentID = %1").arg(talkWindowID);
+        query.exec(sqlStr);
+        if (query.next()) {
+            isGroup = true;
+
+            // 群聊
+            sqlStr = QString("SELECT employeeID, picture "
+                             "FROM tab_employees "
+                             "WHERE status = 1 "
+                             "AND departmentID = %1").arg(talkWindowID);
+        } else {
+            // 单聊
+            sqlStr = QString("SELECT picture "
+                             "FROM tab_employees "
+                             "WHERE status = 1 "
+                             "AND employeeID = %1").arg(talkWindowID);
+            query.exec(sqlStr);
+            query.next();
+            headPath = query.value(0).toString();
+
+            external = "external_" + talkWindowID;
+            MsgHtmlObj *msgHtmlObj = new MsgHtmlObj(this, headPath);
+            m_channel->registerObject(external, msgHtmlObj);
+        }
+    }
+
+    if (isGroup) {
+        query.exec(sqlStr);
+        while (query.next()) {
+            external = "external_" + query.value(0).toString();
+            MsgHtmlObj *msgHtmlObj = new MsgHtmlObj(this, query.value(1).toString());
+            m_channel->registerObject(external, msgHtmlObj);
+        }
+    }
+
+    this->page()->setWebChannel(m_channel);
 
     // 初始化消息页面
     this->load(QUrl("qrc:/Resources/MainWindow/MsgHtml/msgTmpl.html"));
