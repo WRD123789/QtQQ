@@ -1178,6 +1178,7 @@ CMakeFiles/QtQQ.dir/talkwindow.cpp.o: \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/QPixmap \
   /Users/wangrundong/Documents/Projects/QtQQ/windowmanager.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QObject \
+  /Users/wangrundong/Documents/Projects/QtQQ/sendfile.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QFile \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qfile.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qfiledevice.h \

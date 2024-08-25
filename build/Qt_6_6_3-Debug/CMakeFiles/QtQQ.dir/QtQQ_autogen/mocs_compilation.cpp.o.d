@@ -1148,6 +1148,8 @@ CMakeFiles/QtQQ.dir/QtQQ_autogen/mocs_compilation.cpp.o: \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/../../../../qmsgtextedit.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QTextEdit \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/qtextedit.h \
+  /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/moc_receivefile.cpp \
+  /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/../../../../receivefile.h \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/moc_rootcontactitem.cpp \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/../../../../rootcontactitem.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QPropertyAnimation \
@@ -1155,6 +1157,8 @@ CMakeFiles/QtQQ.dir/QtQQ_autogen/mocs_compilation.cpp.o: \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qvariantanimation.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qabstractanimation.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qeasingcurve.h \
+  /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/moc_sendfile.cpp \
+  /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/../../../../sendfile.h \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/moc_skinwindow.cpp \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/../../../../skinwindow.h \
   /Users/wangrundong/Documents/Projects/QtQQ/build/Qt_6_6_3-Debug/QtQQ_autogen/EWIEGA46WW/moc_systray.cpp \

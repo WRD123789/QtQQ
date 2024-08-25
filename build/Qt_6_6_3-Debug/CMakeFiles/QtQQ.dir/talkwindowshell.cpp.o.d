@@ -1175,6 +1175,7 @@ CMakeFiles/QtQQ.dir/talkwindowshell.cpp.o: \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtWidgets.framework/Headers/QTreeWidgetItem \
   /Users/wangrundong/Documents/Projects/QtQQ/windowmanager.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QObject \
+  /Users/wangrundong/Documents/Projects/QtQQ/receivefile.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QFile \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qfile.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/qfiledevice.h \
@@ -1210,4 +1211,5 @@ CMakeFiles/QtQQ.dir/talkwindowshell.cpp.o: \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qtsql-config.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qtsqlexports.h \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qsqldatabase.h \
-  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QChar
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QChar \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QRegularExpression

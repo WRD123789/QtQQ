@@ -29,6 +29,7 @@ public slots:
 private slots:
     void onSendBtnClicked(bool);
     void onItemDoubleClicked(QTreeWidgetItem* item, int column);
+    void onFileOpenBtnClicked(bool);
 
 private:
     void initControl();

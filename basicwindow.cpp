@@ -7,6 +7,7 @@
 #include <QPainter>
 #include <QApplication>
 #include <QMouseEvent>
+#include <QSqlQuery>
 
 BasicWindow::BasicWindow(QWidget *parent)
     : QDialog(parent)

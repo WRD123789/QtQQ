@@ -549,6 +549,30 @@ qmsgtextedit.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/qmsgtextedit.cpp.s
 .PHONY : qmsgtextedit.cpp.s
 
+receivefile.o: receivefile.cpp.o
+.PHONY : receivefile.o
+
+# target to build an object file
+receivefile.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/receivefile.cpp.o
+.PHONY : receivefile.cpp.o
+
+receivefile.i: receivefile.cpp.i
+.PHONY : receivefile.i
+
+# target to preprocess a source file
+receivefile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/receivefile.cpp.i
+.PHONY : receivefile.cpp.i
+
+receivefile.s: receivefile.cpp.s
+.PHONY : receivefile.s
+
+# target to generate assembly for a file
+receivefile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/receivefile.cpp.s
+.PHONY : receivefile.cpp.s
+
 rootcontactitem.o: rootcontactitem.cpp.o
 .PHONY : rootcontactitem.o
 
@@ -572,6 +596,30 @@ rootcontactitem.s: rootcontactitem.cpp.s
 rootcontactitem.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/rootcontactitem.cpp.s
 .PHONY : rootcontactitem.cpp.s
+
+sendfile.o: sendfile.cpp.o
+.PHONY : sendfile.o
+
+# target to build an object file
+sendfile.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/sendfile.cpp.o
+.PHONY : sendfile.cpp.o
+
+sendfile.i: sendfile.cpp.i
+.PHONY : sendfile.i
+
+# target to preprocess a source file
+sendfile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/sendfile.cpp.i
+.PHONY : sendfile.cpp.i
+
+sendfile.s: sendfile.cpp.s
+.PHONY : sendfile.s
+
+# target to generate assembly for a file
+sendfile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QtQQ.dir/build.make CMakeFiles/QtQQ.dir/sendfile.cpp.s
+.PHONY : sendfile.cpp.s
 
 skinwindow.o: skinwindow.cpp.o
 .PHONY : skinwindow.o
@@ -823,9 +871,15 @@ help:
 	@echo "... qmsgtextedit.o"
 	@echo "... qmsgtextedit.i"
 	@echo "... qmsgtextedit.s"
+	@echo "... receivefile.o"
+	@echo "... receivefile.i"
+	@echo "... receivefile.s"
 	@echo "... rootcontactitem.o"
 	@echo "... rootcontactitem.i"
 	@echo "... rootcontactitem.s"
+	@echo "... sendfile.o"
+	@echo "... sendfile.i"
+	@echo "... sendfile.s"
 	@echo "... skinwindow.o"
 	@echo "... skinwindow.i"
 	@echo "... skinwindow.s"

@@ -120,6 +120,16 @@ void UserLogin::onLoginBtnClicked()
         return;
     }
 
+    // 更新登录状态
+    QSqlQuery query;
+    QString sqlStr = QString("UPDATE tab_employees "
+                             "SET online = 2 "
+                             "WHERE employeeID = %1").arg(gLoginEmployeeID);
+    if (!query.exec(sqlStr)) {
+        QMessageBox::information(nullptr, "提示", "登录状态更新失败!");
+        return;
+    }
+
     close();
 
     CCMainWindow *mainWindow = new CCMainWindow(account, isAccountLogin);

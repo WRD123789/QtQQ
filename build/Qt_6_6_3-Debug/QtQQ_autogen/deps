@@ -119,8 +119,12 @@ QtQQ_autogen/timestamp: \
 	/Users/wangrundong/Documents/Projects/QtQQ/qclicklabel.h \
 	/Users/wangrundong/Documents/Projects/QtQQ/qmsgtextedit.cpp \
 	/Users/wangrundong/Documents/Projects/QtQQ/qmsgtextedit.h \
+	/Users/wangrundong/Documents/Projects/QtQQ/receivefile.cpp \
+	/Users/wangrundong/Documents/Projects/QtQQ/receivefile.h \
 	/Users/wangrundong/Documents/Projects/QtQQ/rootcontactitem.cpp \
 	/Users/wangrundong/Documents/Projects/QtQQ/rootcontactitem.h \
+	/Users/wangrundong/Documents/Projects/QtQQ/sendfile.cpp \
+	/Users/wangrundong/Documents/Projects/QtQQ/sendfile.h \
 	/Users/wangrundong/Documents/Projects/QtQQ/skinwindow.cpp \
 	/Users/wangrundong/Documents/Projects/QtQQ/skinwindow.h \
 	/Users/wangrundong/Documents/Projects/QtQQ/systray.cpp \
@@ -1216,6 +1220,8 @@ QtQQ_autogen/timestamp: \
 	/Users/wangrundong/Documents/Projects/QtQQ/ccmainwindow.ui \
 	/Users/wangrundong/Documents/Projects/QtQQ/contactitem.ui \
 	/Users/wangrundong/Documents/Projects/QtQQ/emotionwindow.ui \
+	/Users/wangrundong/Documents/Projects/QtQQ/receivefile.ui \
+	/Users/wangrundong/Documents/Projects/QtQQ/sendfile.ui \
 	/Users/wangrundong/Documents/Projects/QtQQ/skinwindow.ui \
 	/Users/wangrundong/Documents/Projects/QtQQ/talkwindow.ui \
 	/Users/wangrundong/Documents/Projects/QtQQ/talkwindowitem.ui \

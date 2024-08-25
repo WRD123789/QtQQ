@@ -1138,4 +1138,10 @@ CMakeFiles/QtQQ.dir/basicwindow.cpp.o: \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QRect \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QSize \
   /Users/wangrundong/Qt/6.6.3/macos/lib/QtCore.framework/Headers/QSizeF \
-  /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/QTransform
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtGui.framework/Headers/QTransform \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/QSqlQuery \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qsqlquery.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qtsqlglobal.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qtsql-config.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qtsqlexports.h \
+  /Users/wangrundong/Qt/6.6.3/macos/lib/QtSql.framework/Headers/qsqldatabase.h

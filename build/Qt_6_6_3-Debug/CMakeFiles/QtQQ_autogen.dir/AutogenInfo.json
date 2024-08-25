@@ -1250,9 +1250,21 @@
 			null
 		],
 		[
+			"/Users/wangrundong/Documents/Projects/QtQQ/receivefile.h",
+			"MU",
+			"EWIEGA46WW/moc_receivefile.cpp",
+			null
+		],
+		[
 			"/Users/wangrundong/Documents/Projects/QtQQ/rootcontactitem.h",
 			"MU",
 			"EWIEGA46WW/moc_rootcontactitem.cpp",
+			null
+		],
+		[
+			"/Users/wangrundong/Documents/Projects/QtQQ/sendfile.h",
+			"MU",
+			"EWIEGA46WW/moc_sendfile.cpp",
 			null
 		],
 		[
@@ -1462,10 +1474,16 @@
 			null
 		],
 		[
+			"/Users/wangrundong/Documents/Projects/QtQQ/receivefile.cpp",
+			"MU",
+			null
+		],
+		[
 			"/Users/wangrundong/Documents/Projects/QtQQ/rootcontactitem.cpp",
 			"MU",
 			null
 		],
+		[ "/Users/wangrundong/Documents/Projects/QtQQ/sendfile.cpp", "MU", null ],
 		[
 			"/Users/wangrundong/Documents/Projects/QtQQ/skinwindow.cpp",
 			"MU",

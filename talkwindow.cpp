@@ -4,6 +4,7 @@
 #include "contactitem.h"
 #include "commonutils.h"
 #include "windowmanager.h"
+#include "sendfile.h"
 
 #include <QFile>
 #include <QMessageBox>
@@ -89,6 +90,7 @@ void TalkWindow::initControl()
 
     connect(ui->faceBtn, SIGNAL(clicked(bool)), parent(), SLOT(onEmotionBtnClicked(bool)));
     connect(ui->sendBtn, SIGNAL(clicked(bool)), this, SLOT(onSendBtnClicked(bool)));
+    connect(ui->fileOpenBtn, SIGNAL(clicked(bool)), this, SLOT(onFileOpenBtnClicked(bool)));
 
     connect(ui->treeWidget, SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)),
             this, SLOT(onItemDoubleClicked(QTreeWidgetItem*,int)));
@@ -224,3 +226,10 @@ void TalkWindow::addPeopleInfo(QTreeWidgetItem *pRootGroupItem, int employeeID)
     QString peopleName = pContactItem->getUserName();
     m_groupPeopleMap.insert(pChild, peopleName);
 }
+
+void TalkWindow::onFileOpenBtnClicked(bool)
+{
+    SendFile *sendFile = new SendFile(this);
+    sendFile->show();
+}
+

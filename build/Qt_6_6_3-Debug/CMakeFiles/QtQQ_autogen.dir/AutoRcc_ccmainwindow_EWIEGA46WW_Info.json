@@ -10,12 +10,14 @@
 	"INPUTS" : 
 	[
 		"/Users/wangrundong/Documents/Projects/QtQQ/Resources/QSS/Menu.css",
+		"/Users/wangrundong/Documents/Projects/QtQQ/Resources/QSS/ReceiveFile.css",
 		"/Users/wangrundong/Documents/Projects/QtQQ/Resources/QSS/EmotionWindow.css",
 		"/Users/wangrundong/Documents/Projects/QtQQ/Resources/QSS/UserLogin.css",
 		"/Users/wangrundong/Documents/Projects/QtQQ/Resources/QSS/TalkWindow.css",
 		"/Users/wangrundong/Documents/Projects/QtQQ/Resources/QSS/CCMainWindow.css",
 		"/Users/wangrundong/Documents/Projects/QtQQ/Resources/QSS/SkinWindow.css",
 		"/Users/wangrundong/Documents/Projects/QtQQ/Resources/QSS/Title.css",
+		"/Users/wangrundong/Documents/Projects/QtQQ/Resources/QSS/SendFile.css",
 		"/Users/wangrundong/Documents/Projects/QtQQ/Resources/MainWindow/aio_setting_white_hover.png",
 		"/Users/wangrundong/Documents/Projects/QtQQ/Resources/MainWindow/arrow.png",
 		"/Users/wangrundong/Documents/Projects/QtQQ/Resources/MainWindow/scrollbar_top_normal.gft.png",

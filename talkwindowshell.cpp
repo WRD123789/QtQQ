@@ -6,6 +6,7 @@
 #include "talkwindowitem.h"
 #include "windowmanager.h"
 #include "qmsgtextedit.h"
+#include "receivefile.h"
 
 #include <QFile>
 #include <QMessageBox>
@@ -15,6 +16,8 @@
 #include <QRegularExpression>
 
 extern QString gLoginEmployeeID;
+QString gFileName;
+QString gFileData;
 const int gTcpPort = 8888;
 const int gUdpProt = 6666;
 
@@ -259,9 +262,8 @@ void TalkWindowShell::handleReceiveMsg(int senderEmployeeID, int msgType, QStrin
 
     QString html = msgTextEdit.document()->toHtml();
 
-    QRegularExpression regExp("<p[^>]*>(.*?)</p>");
-    html = regExp.replace(html, "<p></p>");
-    qDebug() << html;
+    static QRegularExpression regex(R"(/>\s*[^<]*\s*</p>)");
+    html.replace(regex, R"(/></p>)");
 
     TalkWindow *talkWindow = dynamic_cast<TalkWindow*>(ui->rightStackedWidget->currentWidget());
     talkWindow->ui->msgWidget->appendMsg(html, QString::number(senderEmployeeID));
@@ -378,6 +380,7 @@ void TalkWindowShell::processPendingData()
             return;
 
         if (data[0] == '1') {
+            // 群聊
             windowID = data.mid(groupFlagWidth + employeeIDWidth, groupWidth);
             msgType = data[groupFlagWidth + employeeIDWidth + groupWidth];
 
@@ -399,7 +402,9 @@ void TalkWindowShell::processPendingData()
                 int posDataBegin = data.indexOf("data_begin");
 
                 fileName = data.mid(posBytes + bytesWidth, posDataBegin - posBytes - bytesWidth);
+                gFileName = fileName;
                 msg = data.mid(posDataBegin + dataBeginWidth);
+                gFileData = msg;
 
                 // 根据 employeeID 获取发送者名称
                 QString senderName;
@@ -411,12 +416,24 @@ void TalkWindowShell::processPendingData()
                 query.next();
                 senderName = query.value(0).toString();
 
-                // 接收文件的后续处理
-                // ...
+                ReceiveFile *receiveFile = new ReceiveFile(this);
+
+                connect(receiveFile, &ReceiveFile::refuseFile, [this] {
+                    return;
+                });
+
+                QString msgLabel = QString("收到来自 %1 发来的文件, 是否接收? ").arg(senderName);
+                receiveFile->setMsg(msgLabel);
+                receiveFile->show();
             }
         } else {
+            // 单聊
             receiveEmployeeID = data.mid(groupFlagWidth + employeeIDWidth, employeeIDWidth);
             windowID = sendEmployeeID;
+
+            // 不是发给自己的信息
+            if (receiveEmployeeID != gLoginEmployeeID)
+                return;
 
             msgType = data[groupFlagWidth + employeeIDWidth + employeeIDWidth];
             if (msgType == '1') {
@@ -437,10 +454,27 @@ void TalkWindowShell::processPendingData()
                 int posDataBegin = data.indexOf("data_begin");
 
                 fileName = data.mid(posBytes + bytesWidth, posDataBegin - posBytes - bytesWidth);
+                gFileName = fileName;
                 msg = data.mid(posDataBegin + dataBeginWidth);
+                gFileData = msg;
 
-                // 接收文件的后续处理
-                // ...
+                QSqlQuery query;
+                QString sqlStr = QString("SELECT employee_name "
+                                         "FROM tab_employees "
+                                         "WHERE employeeID = %1").arg(sendEmployeeID.toInt());
+                query.exec(sqlStr);
+                query.next();
+                QString senderName = query.value(0).toString();
+
+                ReceiveFile *receiveFile = new ReceiveFile(this);
+
+                connect(receiveFile, &ReceiveFile::refuseFile, [this] {
+                    return;
+                });
+
+                QString msgLabel = QString("收到来自 %1 发来的文件, 是否接收? ").arg(senderName);
+                receiveFile->setMsg(msgLabel);
+                receiveFile->show();
             }
         }
 
